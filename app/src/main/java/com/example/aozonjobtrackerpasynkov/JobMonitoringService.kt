@@ -19,6 +19,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import com.example.aozonjobtrackerpasynkov.network.TelegramClient
 
 class JobMonitoringService : Service() {
 
@@ -40,6 +41,9 @@ class JobMonitoringService : Service() {
 
     private var lastResult: String = "No checks yet"
     private var currentStatus: String = "Idle"
+    
+    private var lastHeartbeatTime = 0L
+    private val heartbeatIntervalMs = 5 * 60 * 1000L // 5 minutes
 
     private fun updateCombinedNotification() {
         val text = "Result: $lastResult | Bot: $currentStatus"
@@ -134,6 +138,34 @@ class JobMonitoringService : Service() {
         }
         
         wakeLock.release()
+        checkHeartbeat()
+    }
+
+    private fun checkHeartbeat() {
+        val now = System.currentTimeMillis()
+        if (now - lastHeartbeatTime >= heartbeatIntervalMs) {
+            sendHeartbeat()
+            lastHeartbeatTime = now
+        }
+    }
+
+    private fun sendHeartbeat() {
+        val sharedPrefs = getSharedPreferences("OzonPrefs", Context.MODE_PRIVATE)
+        val token = sharedPrefs.getString("tg_bot_token", "") ?: ""
+        val chatId = sharedPrefs.getString("tg_chat_id", "") ?: ""
+        
+        if (token.isNotBlank() && chatId.isNotBlank()) {
+            val client = TelegramClient(token, chatId)
+            val time = java.text.SimpleDateFormat("HH:mm", java.util.Locale.getDefault()).format(java.util.Date())
+            val message = "❤️ Heartbeat: Ozon Bot is alive\nTime: $time\nBot: $currentStatus\nResult: $lastResult"
+            client.sendMessage(message) { success, error ->
+                if (success) {
+                    Log.d(TAG, "Heartbeat sent to Telegram")
+                } else {
+                    Log.e(TAG, "Failed to send heartbeat: $error")
+                }
+            }
+        }
     }
 
     private fun createNotificationChannel() {
