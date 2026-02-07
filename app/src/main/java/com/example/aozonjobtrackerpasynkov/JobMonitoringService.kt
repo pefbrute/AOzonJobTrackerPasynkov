@@ -38,33 +38,44 @@ class JobMonitoringService : Service() {
         }
     }
 
+    private var lastResult: String = "No checks yet"
+    private var currentStatus: String = "Idle"
+
+    private fun updateCombinedNotification() {
+        val text = "Result: $lastResult | Bot: $currentStatus"
+        updateNotification(text)
+    }
+
     override fun onCreate() {
         super.onCreate()
         Log.d(TAG, "Service onCreate")
         createNotificationChannel()
         try {
-            startForeground(NOTIFICATION_ID, createNotification("Monitoring paused"))
+            startForeground(NOTIFICATION_ID, createNotification("Initializing..."))
             Log.d(TAG, "Service started foreground")
         } catch (e: Exception) {
             Log.e(TAG, "Error starting foreground: ${e.message}")
         }
         
-        // Listen for service state to show what bot is doing right now
+        // Listen for service state (detailed logs)
         scope.launch {
             OzonJobAccessibilityService.serviceState.collectLatest { msg ->
-                val time = java.text.SimpleDateFormat("HH:mm:ss", java.util.Locale.getDefault()).format(java.util.Date())
-                updateNotification("[$time] $msg")
+                currentStatus = msg
+                updateCombinedNotification()
             }
         }
         
-        // Listen for final slot status to notify user loudly
+        // Listen for slot check results
         scope.launch {
             OzonJobAccessibilityService.slotStatus.collectLatest { days ->
                 val time = java.text.SimpleDateFormat("HH:mm", java.util.Locale.getDefault()).format(java.util.Date())
                 if (days != null) {
-                    updateNotification("FINISHED: SLOTS FOUND!")
+                    lastResult = "SLOTS FOUND! ($time)"
                     sendSlotFoundNotification(days)
+                } else {
+                    lastResult = "No slots ($time)"
                 }
+                updateCombinedNotification()
             }
         }
     }

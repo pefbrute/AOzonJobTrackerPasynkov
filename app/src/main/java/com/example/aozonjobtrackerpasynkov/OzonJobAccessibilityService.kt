@@ -527,7 +527,18 @@ class OzonJobAccessibilityService : AccessibilityService() {
                 availableDays.addAll(foundDates)
             }
 
-            if (availableDays.isNotEmpty()) {
+            val durationMs = System.currentTimeMillis() - cycleStartTime
+            val found = availableDays.isNotEmpty()
+            
+            // Log for statistics every attempt
+            statsRepository?.recordCheck(
+                isSuccess = true,
+                slotsFound = found,
+                slotDays = if (found) availableDays.distinct().joinToString(", ") else null,
+                durationMs = durationMs
+            )
+
+            if (found) {
                  val daysString = availableDays.distinct().joinToString(", ")
                  Log.i(TAG, "=== SLOTS FOUND for $JOB_NAME: $daysString ===")
                  _slotStatus.tryEmit(daysString)
@@ -535,17 +546,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
                  isCheckRequested = false
                  currentState = State.IDLE
                  
-                 // NEW: Успешный цикл - сбрасываем счётчики провалов
                  recoveryManager?.onCycleSuccess()
-                 
-                 // NEW: Записываем статистику (слоты найдены)
-                 val durationMs = System.currentTimeMillis() - cycleStartTime
-                 statsRepository?.recordCheck(
-                     isSuccess = true,
-                     slotsFound = true,
-                     slotDays = daysString,
-                     durationMs = durationMs
-                 )
                  
                  Log.d(TAG, "Check cycle complete. Slots found. Duration: ${durationMs}ms. Returning Home.")
                  performGlobalAction(GLOBAL_ACTION_HOME)
@@ -553,10 +554,10 @@ class OzonJobAccessibilityService : AccessibilityService() {
                  Log.i(TAG, "No slots for $JOB_NAME yet.")
                  val sharedPrefs = getSharedPreferences("OzonPrefs", MODE_PRIVATE)
                  val fastRefresh = sharedPrefs.getBoolean("fast_refresh", false)
-                 Log.d(TAG, "No slots found. Fast Refresh setting: $fastRefresh, Attempt: $refreshCount")
                  
                  if (fastRefresh && refreshCount < MAX_REFRESH_ATTEMPTS) {
-                     refreshCount++
+                     refreshCount = refreshCount + 1
+                     _slotStatus.tryEmit(null)
                      currentState = State.REFRESH_BACK
                  } else {
                      Log.d(TAG, "No slots and fast refresh exhausted/off. Returning Home.")
@@ -565,18 +566,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
                      isCheckRequested = false
                      currentState = State.IDLE
                      
-                     // NEW: Цикл завершён без слотов - это не провал, сбрасываем счётчики
                      recoveryManager?.onCycleSuccess()
-                     
-                     // NEW: Записываем статистику (слоты не найдены)
-                     val durationMs = System.currentTimeMillis() - cycleStartTime
-                     statsRepository?.recordCheck(
-                         isSuccess = true,
-                         slotsFound = false,
-                         slotDays = null,
-                         durationMs = durationMs
-                     )
-                     
                      performGlobalAction(GLOBAL_ACTION_HOME)
                  }
             }
