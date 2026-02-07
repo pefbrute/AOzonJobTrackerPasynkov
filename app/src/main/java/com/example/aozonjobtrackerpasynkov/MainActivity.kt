@@ -18,6 +18,7 @@ import com.example.aozonjobtrackerpasynkov.ui.theme.AOzonJobTrackerPasynkovTheme
 import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import kotlinx.coroutines.flow.collectLatest
 
 class MainActivity : ComponentActivity() {
@@ -60,6 +61,8 @@ fun MainScreen(modifier: Modifier = Modifier) {
 
     val sharedPrefs = context.getSharedPreferences("OzonPrefs", Context.MODE_PRIVATE)
     var actionDelay by remember { mutableFloatStateOf(sharedPrefs.getFloat("action_delay", 3.0f)) }
+    var refreshDelay by remember { mutableFloatStateOf(sharedPrefs.getFloat("refresh_delay", 1.5f)) }
+    var fastRefresh by remember { mutableStateOf(sharedPrefs.getBoolean("fast_refresh", false)) }
 
     Column(modifier = modifier.padding(16.dp)) {
         Text("Ozon Job Watcher", style = MaterialTheme.typography.headlineMedium)
@@ -71,6 +74,32 @@ fun MainScreen(modifier: Modifier = Modifier) {
             color = if (isAccessibilityEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error,
             style = MaterialTheme.typography.titleMedium
         )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Checkbox(
+                checked = fastRefresh,
+                onCheckedChange = { 
+                    fastRefresh = it
+                    sharedPrefs.edit().putBoolean("fast_refresh", it).apply()
+                }
+            )
+            Text("Fast Refresh Mode (Back & Forth)")
+        }
+
+        if (fastRefresh) {
+            Text("Fast Refresh Delay: ${"%.1f".format(refreshDelay)}s")
+            Slider(
+                value = refreshDelay,
+                onValueChange = { 
+                    refreshDelay = it
+                    sharedPrefs.edit().putFloat("refresh_delay", it).apply()
+                },
+                valueRange = 0.5f..5f,
+                steps = 8 // 0.5s increments
+            )
+        }
 
         Spacer(modifier = Modifier.height(8.dp))
 

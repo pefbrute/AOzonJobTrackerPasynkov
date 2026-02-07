@@ -29,8 +29,12 @@ class OzonJobAccessibilityService : AccessibilityService() {
         SELECT_WAREHOUSE,
         CLICK_ENROLL,
         FIND_JOB_CARD,
-        CHECK_SLOTS
+        CHECK_SLOTS,
+        REFRESH_BACK
     }
+
+    private var refreshCount = 0
+    private val MAX_REFRESH_ATTEMPTS = 10
 
     private var currentState = State.IDLE
     private var lastActionTime = 0L
@@ -79,6 +83,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
 
     private fun startCheckCycleInternal() {
         isCheckRequested = true
+        refreshCount = 0
         currentState = State.FIND_WAREHOUSES_TAB 
         Log.d(TAG, "Starting check cycle")
         
@@ -96,18 +101,18 @@ class OzonJobAccessibilityService : AccessibilityService() {
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
-        Log.v(TAG, "onAccessibilityEvent: type=${event?.eventType}, package=${event?.packageName}, req=$isCheckRequested")
-        
         if (!isCheckRequested) return
         
         val rootNode = rootInActiveWindow
-        if (rootNode == null) {
-            Log.w(TAG, "rootInActiveWindow is null")
-            return
-        }
+        if (rootNode == null) return
         
-        if ((System.currentTimeMillis() % 3000) < 100) {
-            Log.d(TAG, "Active App: ${rootNode.packageName}, State: $currentState")
+        // Only act on Ozon app or system gestures
+        if (rootNode.packageName != "ru.ozon.hire") {
+            // Log once in a while if we are in wrong app
+            if ((System.currentTimeMillis() % 10000) < 500) {
+                Log.d(TAG, "Waiting for Ozon... current: ${rootNode.packageName}")
+            }
+            return
         }
 
         processEvent(rootNode)
@@ -125,10 +130,21 @@ class OzonJobAccessibilityService : AccessibilityService() {
         val hasJob = findNodeRecursive(rootNode) { it.text?.toString()?.contains(JOB_NAME, ignoreCase = true) == true }
         if (hasJob != null) {
             hasJob.recycle()
-            if (currentState != State.CHECK_SLOTS && currentState != State.FIND_JOB_CARD && currentState != State.IDLE) {
-                Log.d(TAG, "Opportunistic jump: Found '$JOB_NAME', switching to FIND_JOB_CARD")
-                currentState = State.FIND_JOB_CARD
-                return true
+            
+            // Verifier: only jump if we also see "Выберите время" or "К списку работ" or similar
+            val isActuallySlotScreen = findNodeRecursive(rootNode) { 
+                val t = it.text?.toString() ?: ""
+                t.contains("время", ignoreCase = true) || t.contains("списку", ignoreCase = true) || t.contains("регистрация", ignoreCase = true)
+            }
+            
+            if (isActuallySlotScreen != null) {
+                isActuallySlotScreen.recycle()
+                if (currentState != State.CHECK_SLOTS && currentState != State.FIND_JOB_CARD && 
+                    currentState != State.IDLE && currentState != State.REFRESH_BACK) {
+                    Log.d(TAG, "Opportunistic jump: Found '$JOB_NAME' + Slot marker, switching to FIND_JOB_CARD")
+                    currentState = State.FIND_JOB_CARD
+                    return true
+                }
             }
         }
 
@@ -138,7 +154,15 @@ class OzonJobAccessibilityService : AccessibilityService() {
     private fun processEvent(rootNode: AccessibilityNodeInfo) {
         try {
             val sharedPrefs = getSharedPreferences("OzonPrefs", MODE_PRIVATE)
-            val delaySeconds = sharedPrefs.getFloat("action_delay", 3.0f)
+            val fastRefresh = sharedPrefs.getBoolean("fast_refresh", false)
+            
+            // Use specific delay for refresh loop vs normal navigation
+            val delaySeconds = if (fastRefresh && (currentState == State.REFRESH_BACK || (currentState == State.CLICK_ENROLL && refreshCount > 0))) {
+                sharedPrefs.getFloat("refresh_delay", 1.5f)
+            } else {
+                sharedPrefs.getFloat("action_delay", 3.0f)
+            }
+            
             val delayMillis = (delaySeconds * 1000).toLong()
 
             // throttle actions to avoid rapid double-clicks and state loops
@@ -167,11 +191,21 @@ class OzonJobAccessibilityService : AccessibilityService() {
                 State.CLICK_ENROLL -> processClickEnroll(rootNode)
                 State.FIND_JOB_CARD -> processFindJobCard(rootNode)
                 State.CHECK_SLOTS -> processCheckSlots(rootNode)
+                State.REFRESH_BACK -> processRefreshBack()
                 else -> {}
             }
         } catch (e: Exception) {
-            Log.e(TAG, "Error in processEvent", e)
+            Log.e(TAG, "Error in processEvent: ${e.message}")
         }
+    }
+
+    private fun processRefreshBack() {
+        Log.d(TAG, "Refreshing: Executing BACK action (Attempt $refreshCount)")
+        performGlobalAction(GLOBAL_ACTION_BACK)
+        // Set lastActionTime to give it time to go back
+        lastActionTime = System.currentTimeMillis()
+        currentState = State.CLICK_ENROLL 
+        _serviceState.tryEmit("Refreshing... ($refreshCount/10)")
     }
 
     private fun findNodeRecursive(node: AccessibilityNodeInfo, predicate: (AccessibilityNodeInfo) -> Boolean): AccessibilityNodeInfo? {
@@ -284,8 +318,8 @@ class OzonJobAccessibilityService : AccessibilityService() {
 
     private fun processClickEnroll(rootNode: AccessibilityNodeInfo) {
         val target = findNodeRecursive(rootNode) { 
-            val t = it.text?.toString() ?: ""
-            t.contains("Записаться", ignoreCase = true)
+            val t = (it.text?.toString() ?: "") + (it.contentDescription?.toString() ?: "")
+            t.contains("Записаться", ignoreCase = true) || t.contains("ГРАФИК", ignoreCase = true)
         }
 
         if (target != null) {
@@ -296,8 +330,8 @@ class OzonJobAccessibilityService : AccessibilityService() {
             lastActionTime = System.currentTimeMillis()
             _serviceState.tryEmit("Clicked 'Записаться'")
         } else {
-            if (!hasDumpedHierarchy || (System.currentTimeMillis() % 10000) < 500) {
-                Log.d(TAG, "Still missing 'Записаться' button. Dumping...")
+            if (!hasDumpedHierarchy || (System.currentTimeMillis() % 5000) < 500) {
+                Log.d(TAG, "Searching for 'Записаться' button... (Current State: $currentState)")
                 dumpNodeHierarchy(rootNode, 0)
                 hasDumpedHierarchy = true
             }
@@ -350,16 +384,11 @@ class OzonJobAccessibilityService : AccessibilityService() {
             val foundDates = allTexts.filter { dateRegex.find(it) != null }
             
             // In the combined view, if a job has slots, the dates are visible.
-            // If "НЕТ МЕСТ" is present, we need to be careful.
             val noSlotsVisible = allTexts.any { it.contains("НЕТ МЕСТ", ignoreCase = true) }
             
             if (!noSlotsVisible && foundDates.isNotEmpty()) {
                 availableDays.addAll(foundDates)
             } else if (foundDates.isNotEmpty()) {
-                // If some dates are shown but "НЕТ МЕСТ" is also there, 
-                // it might mean some days are closed. 
-                // This is complex without full hierarchy, but let's take all found dates 
-                // if we don't see "НЕТ МЕСТ" right next to them.
                 availableDays.addAll(foundDates)
             }
 
@@ -367,16 +396,40 @@ class OzonJobAccessibilityService : AccessibilityService() {
                  val daysString = availableDays.distinct().joinToString(", ")
                  Log.i(TAG, "=== SLOTS FOUND for $JOB_NAME: $daysString ===")
                  _slotStatus.tryEmit(daysString)
+                 refreshCount = 0
+                 isCheckRequested = false
+                 currentState = State.IDLE
+                 Log.d(TAG, "Check cycle complete. Slots found. Returning Home.")
+                 performGlobalAction(GLOBAL_ACTION_HOME)
             } else {
                  Log.i(TAG, "No slots for $JOB_NAME yet.")
-                 _slotStatus.tryEmit(null)
+                 val sharedPrefs = getSharedPreferences("OzonPrefs", MODE_PRIVATE)
+                 val fastRefresh = sharedPrefs.getBoolean("fast_refresh", false)
+                 Log.d(TAG, "No slots found. Fast Refresh setting: $fastRefresh, Attempt: $refreshCount")
+                 
+                 if (fastRefresh && refreshCount < MAX_REFRESH_ATTEMPTS) {
+                     refreshCount++
+                     currentState = State.REFRESH_BACK
+                 } else {
+                     Log.d(TAG, "No slots and fast refresh exhausted/off. Returning Home.")
+                     _slotStatus.tryEmit(null)
+                     refreshCount = 0
+                     isCheckRequested = false
+                     currentState = State.IDLE
+                     performGlobalAction(GLOBAL_ACTION_HOME)
+                 }
             }
-            
             jobCard.recycle()
-            isCheckRequested = false
-            currentState = State.IDLE
-            Log.d(TAG, "Check cycle complete. Returning Home.")
-            performGlobalAction(GLOBAL_ACTION_HOME)
+        } else {
+            // Fallback: if we are in CHECK_SLOTS but don't see the job, maybe we see 'Записаться'?
+            val hasEnroll = findNodeRecursive(rootNode) { 
+                (it.text?.toString() ?: "").contains("Записаться", ignoreCase = true) 
+            }
+            if (hasEnroll != null) {
+                hasEnroll.recycle()
+                Log.d(TAG, "Stuck in CHECK_SLOTS but see 'Записаться'. Moving to CLICK_ENROLL.")
+                currentState = State.CLICK_ENROLL
+            }
         }
     }
 
@@ -395,7 +448,21 @@ class OzonJobAccessibilityService : AccessibilityService() {
     }
 
     private fun dumpNodeHierarchy(node: AccessibilityNodeInfo, depth: Int) {
-        // Disabled for production to save resources
+        if (depth > 15) return // Too deep
+        val indent = "  ".repeat(depth)
+        val text = node.text?.toString()?.replace("\n", " ") ?: ""
+        val desc = node.contentDescription?.toString()?.replace("\n", " ") ?: ""
+        val className = node.className?.toString()?.split(".")?.last() ?: "Node"
+        val clickable = if (node.isClickable) "[C]" else ""
+        
+        Log.v(TAG, "$indent$className: T='$text' D='$desc' $clickable")
+        
+        for (i in 0 until node.childCount) {
+            node.getChild(i)?.let { 
+                dumpNodeHierarchy(it, depth + 1)
+                it.recycle()
+            }
+        }
     }
 
     private fun findScrollableNode(node: AccessibilityNodeInfo): AccessibilityNodeInfo? {
