@@ -15,6 +15,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
+import com.example.aozonjobtrackerpasynkov.data.StatsRepository
 
 class OzonJobAccessibilityService : AccessibilityService() {
 
@@ -46,6 +47,12 @@ class OzonJobAccessibilityService : AccessibilityService() {
     
     // NEW: Счётчик циклов для логирования
     private var cycleId = 0
+    
+    // NEW: Время начала цикла для статистики
+    private var cycleStartTime = 0L
+    
+    // NEW: Repository для записи статистики
+    private var statsRepository: StatsRepository? = null
 
     override fun onInterrupt() {
         Log.d(TAG, "Service interrupted")
@@ -103,6 +110,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
         isCheckRequested = true
         refreshCount = 0
         cycleId++
+        cycleStartTime = System.currentTimeMillis()  // NEW: Засекаем время начала
         
         // NEW: Начинаем с определения экрана
         currentState = State.BOOTSTRAP_DETECT_AND_ROUTE
@@ -123,6 +131,9 @@ class OzonJobAccessibilityService : AccessibilityService() {
         
         // NEW: Инициализируем RecoveryManager
         recoveryManager = RecoveryManager(applicationContext, this)
+        
+        // NEW: Инициализируем StatsRepository
+        statsRepository = StatsRepository.getInstance(applicationContext)
         
         _serviceState.tryEmit("Service Connected")
     }
@@ -503,7 +514,16 @@ class OzonJobAccessibilityService : AccessibilityService() {
                  // NEW: Успешный цикл - сбрасываем счётчики провалов
                  recoveryManager?.onCycleSuccess()
                  
-                 Log.d(TAG, "Check cycle complete. Slots found. Returning Home.")
+                 // NEW: Записываем статистику (слоты найдены)
+                 val durationMs = System.currentTimeMillis() - cycleStartTime
+                 statsRepository?.recordCheck(
+                     isSuccess = true,
+                     slotsFound = true,
+                     slotDays = daysString,
+                     durationMs = durationMs
+                 )
+                 
+                 Log.d(TAG, "Check cycle complete. Slots found. Duration: ${durationMs}ms. Returning Home.")
                  performGlobalAction(GLOBAL_ACTION_HOME)
             } else {
                  Log.i(TAG, "No slots for $JOB_NAME yet.")
@@ -523,6 +543,15 @@ class OzonJobAccessibilityService : AccessibilityService() {
                      
                      // NEW: Цикл завершён без слотов - это не провал, сбрасываем счётчики
                      recoveryManager?.onCycleSuccess()
+                     
+                     // NEW: Записываем статистику (слоты не найдены)
+                     val durationMs = System.currentTimeMillis() - cycleStartTime
+                     statsRepository?.recordCheck(
+                         isSuccess = true,
+                         slotsFound = false,
+                         slotDays = null,
+                         durationMs = durationMs
+                     )
                      
                      performGlobalAction(GLOBAL_ACTION_HOME)
                  }

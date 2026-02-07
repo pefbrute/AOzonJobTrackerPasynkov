@@ -17,9 +17,14 @@ import androidx.compose.ui.unit.dp
 import com.example.aozonjobtrackerpasynkov.ui.theme.AOzonJobTrackerPasynkovTheme
 import android.content.Context
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import kotlinx.coroutines.flow.collectLatest
+import com.example.aozonjobtrackerpasynkov.data.StatsRepository
+import com.example.aozonjobtrackerpasynkov.ui.StatsScreen
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.List
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +32,35 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AOzonJobTrackerPasynkovTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MainScreen(modifier = Modifier.padding(innerPadding))
+                var selectedTab by remember { mutableIntStateOf(0) }
+                val context = LocalContext.current
+                val statsRepository = remember { StatsRepository.getInstance(context) }
+
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    bottomBar = {
+                        NavigationBar {
+                            NavigationBarItem(
+                                selected = selectedTab == 0,
+                                onClick = { selectedTab = 0 },
+                                label = { Text("Monitor") },
+                                icon = { Icon(Icons.Default.Settings, contentDescription = null) }
+                            )
+                            NavigationBarItem(
+                                selected = selectedTab == 1,
+                                onClick = { selectedTab = 1 },
+                                label = { Text("Stats") },
+                                icon = { Icon(Icons.Default.List, contentDescription = null) }
+                            )
+                        }
+                    }
+                ) { innerPadding ->
+                    Box(modifier = Modifier.padding(innerPadding)) {
+                        when (selectedTab) {
+                            0 -> MainScreen()
+                            1 -> StatsScreen(statsRepository)
+                        }
+                    }
                 }
             }
         }
