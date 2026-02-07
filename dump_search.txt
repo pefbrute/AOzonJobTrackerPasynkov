@@ -1,0 +1,956 @@
+02-07 10:05:44.724 D/OzonJobAccessibility( 6934): Search Field not found. Dumping hierarchy (State: FIND_SEARCH_FIELD):
+02-07 10:05:44.724 D/OzonJobAccessibility( 6934):  Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.725 D/OzonJobAccessibility( 6934):    Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.725 D/OzonJobAccessibility( 6934):      Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.725 D/OzonJobAccessibility( 6934):        Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/action_bar_root, Clickable: false
+02-07 10:05:44.725 D/OzonJobAccessibility( 6934):          Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: android:id/content, Clickable: false
+02-07 10:05:44.725 D/OzonJobAccessibility( 6934):            Class: androidx.compose.ui.platform.ComposeView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.725 D/OzonJobAccessibility( 6934):              Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.725 D/OzonJobAccessibility( 6934):                Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.726 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.726 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.726 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.726 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.726 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.727 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тариф +50%', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.727 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Жуковский', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.727 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈16 230 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.727 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 352 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.727 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.727 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '140182 Россия, Московская обл., г.о. Жуковский, г.Жуковский, р-н Замоскворечье, д.457, стр.5', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.728 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.728 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.728 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.728 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.728 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.729 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.729 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '+6 дней', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.729 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.729 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Записаться', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.729 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.729 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.730 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'О складе', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.730 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.730 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:05:44.730 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.730 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.730 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.731 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.731 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.731 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Казань', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.731 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.731 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈14 121 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.731 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.731 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 176 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.731 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.731 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.732 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '422527, Республика Татарстан, Зеленодольский район, г. Зеленодольск, 19', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Карта', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Выберите склад', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '860 объектов', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                  Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Вид услуг', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тип склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Есть автобус', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Высокий тариф', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.732 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTab, Clickable: true
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Записи', Desc: 'calendarTab', ID: ru.ozon.hire:id/calendarTabText, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTabIcon, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTab, Clickable: true
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Выплаты', Desc: 'walletTab', ID: ru.ozon.hire:id/walletTabText, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTabIcon, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTab, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Склады', Desc: 'warehouseTab', ID: ru.ozon.hire:id/warehouseTabText, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTabIcon, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTab, Clickable: true
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Поездки', Desc: 'tripsTab', ID: ru.ozon.hire:id/tripsTabText, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTabIcon, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTab, Clickable: true
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Курсы', Desc: 'coursesTab', ID: ru.ozon.hire:id/coursesTabText, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTabIcon, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.733 D/OzonJobAccessibility( 6934):    Class: android.view.View, Text: 'null', Desc: 'null', ID: android:id/navigationBarBackground, Clickable: false
+02-07 10:05:44.734 W/PlayGamesServices[UiUtils](23728): AppVersion: Cannot find the installed destination app.
+02-07 10:05:44.734 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.735 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+02-07 10:05:44.735 W/PlayGamesServices[UiUtils](23728): AppVersionName: Cannot find the installed destination app.
+02-07 10:05:44.739 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[4]  
+02-07 10:05:44.741 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.749 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.753 I/BufferQueueProducer( 1114): [FramebufferSurface](this:0xb400007a05bd58e0,id:-1,api:1,p:1114,c:1114) queueBuffer: fps=0.40 dur=2499.84 max=2499.84 min=2499.84
+02-07 10:05:44.757 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+02-07 10:05:44.760 I/PlayGamesServices[GamesSyncAdapter](23728): Starting sync for 2ed8b87a
+02-07 10:05:44.762 I/PlayGamesServices[GamesSyncAdapter](23728): Sync duration for 2ed8b87a: 2
+02-07 10:05:44.767 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.767 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.769 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.770 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.770 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.770 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.770 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.770 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.772 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.772 W/PlayGamesServices[UiUtils](23728): AppVersion: Cannot find the installed destination app.
+02-07 10:05:44.772 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+02-07 10:05:44.772 W/PlayGamesServices[UiUtils](23728): AppVersionName: Cannot find the installed destination app.
+02-07 10:05:44.777 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.790 V/OzonJobAccessibility( 6934): onAccessibilityEvent: type=2048, package=com.android.systemui, isCheckRequested=true
+02-07 10:05:44.791 D/OzonJobAccessibility( 6934): Event from: com.android.systemui, Root Pkg: ru.ozon.hire, Class: android.widget.FrameLayout
+02-07 10:05:44.799 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.802 D/OzonJobAccessibility( 6934): Search Field not found. Dumping hierarchy (State: FIND_SEARCH_FIELD):
+02-07 10:05:44.802 D/OzonJobAccessibility( 6934):  Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.802 D/OzonJobAccessibility( 6934):    Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.803 D/OzonJobAccessibility( 6934):      Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.803 D/OzonJobAccessibility( 6934):        Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/action_bar_root, Clickable: false
+02-07 10:05:44.803 D/OzonJobAccessibility( 6934):          Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: android:id/content, Clickable: false
+02-07 10:05:44.803 D/OzonJobAccessibility( 6934):            Class: androidx.compose.ui.platform.ComposeView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.803 D/OzonJobAccessibility( 6934):              Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.803 D/OzonJobAccessibility( 6934):                Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.804 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.804 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.804 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.804 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.804 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.805 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тариф +50%', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Жуковский', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈16 230 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 352 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '140182 Россия, Московская обл., г.о. Жуковский, г.Жуковский, р-н Замоскворечье, д.457, стр.5', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '+6 дней', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Записаться', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'О складе', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.806 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Казань', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈14 121 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 176 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '422527, Республика Татарстан, Зеленодольский район, г. Зеленодольск, 19', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Карта', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Выберите склад', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '860 объектов', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                  Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Вид услуг', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тип склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Есть автобус', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Высокий тариф', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:05:44.807 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTab, Clickable: true
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Записи', Desc: 'calendarTab', ID: ru.ozon.hire:id/calendarTabText, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTabIcon, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTab, Clickable: true
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Выплаты', Desc: 'walletTab', ID: ru.ozon.hire:id/walletTabText, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTabIcon, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTab, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Склады', Desc: 'warehouseTab', ID: ru.ozon.hire:id/warehouseTabText, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTabIcon, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTab, Clickable: true
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Поездки', Desc: 'tripsTab', ID: ru.ozon.hire:id/tripsTabText, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTabIcon, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTab, Clickable: true
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Курсы', Desc: 'coursesTab', ID: ru.ozon.hire:id/coursesTabText, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTabIcon, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:05:44.808 D/OzonJobAccessibility( 6934):    Class: android.view.View, Text: 'null', Desc: 'null', ID: android:id/navigationBarBackground, Clickable: false
+02-07 10:05:44.808 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+02-07 10:05:44.809 I/PlayGamesServices[GamesSyncAdapter](23728): Starting sync for d1c078b1
+02-07 10:05:44.811 I/PlayGamesServices[GamesSyncAdapter](23728): Sync duration for d1c078b1: 1
+02-07 10:05:44.816 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.816 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.818 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.818 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.818 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.818 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.818 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.818 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.820 W/PlayGamesServices[UiUtils](23728): AppVersion: Cannot find the installed destination app.
+02-07 10:05:44.821 W/PlayGamesServices[UiUtils](23728): AppVersionName: Cannot find the installed destination app.
+02-07 10:05:44.822 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.824 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+02-07 10:05:44.834 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.845 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.852 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+02-07 10:05:44.853 I/PlayGamesServices[GamesSyncAdapter](23728): Starting sync for 99e294ee
+02-07 10:05:44.856 I/PlayGamesServices[GamesSyncAdapter](23728): Sync duration for 99e294ee: 2
+02-07 10:05:44.860 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.860 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.862 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.862 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.862 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.862 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.862 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.862 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.864 W/PlayGamesServices[UiUtils](23728): AppVersion: Cannot find the installed destination app.
+02-07 10:05:44.864 W/PlayGamesServices[UiUtils](23728): AppVersionName: Cannot find the installed destination app.
+02-07 10:05:44.865 I/android.hardware.graphics.composer@3.2-service( 1007): Sensor: notify citsensorservice to trigger cwb
+02-07 10:05:44.865 I/libsensor-frameBufferManager( 1599): request dump start
+02-07 10:05:44.865 D/libcomposer_ext( 1599): ClientImplAidl::getDispDump(), dpy 1, dst (160, 120), dump_point 1, release_fence -1
+02-07 10:05:44.865 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.865 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.865 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.866 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.866 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.866 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.866 D/libcomposer_ext( 1007): DeviceImplAidl::syncPerform(14), client_handle: 1
+02-07 10:05:44.866 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.866 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::ParseGetDispDump()
+02-07 10:05:44.866 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.866 D/libcomposer_ext( 1007): DeviceImplAidl::ParseGetDispDump(), dpy 1, dst (160, 120), dump_point 1
+02-07 10:05:44.866 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.866 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.866 I/hwcomposer( 1007): [HWC] getDispDump(), dpy 1, (822,7,982,127), (160, 120), (1, 2), (-1), (-1), (0xb400007540339990)  
+02-07 10:05:44.866 E/JobScheduler.Background( 1877): Couldn't determine stopped state for unknown package: com.google.android.apps.turbo
+02-07 10:05:44.866 I/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), id_crtc 103, id_connector 34, dump_point 1, src(160, 120), dst(160, 120), config 2  
+02-07 10:05:44.866 E/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), disp(1220, 2712)  
+02-07 10:05:44.866 I/hwcomposer( 1007): [DISP_DUMP] setDumpBuf(), dpy(0), src(822, 7, 982, 127), dst(160, 120), (1, 2), -1, (-1), (0xb400007540339990)  
+02-07 10:05:44.867 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+02-07 10:05:44.867 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[9]  
+02-07 10:05:44.874 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::NotifyDispDumpReady()
+02-07 10:05:44.874 D/libcomposer_ext( 1599): ClientCallbackAidl::asyncPerform(15)
+02-07 10:05:44.874 D/libcomposer_ext( 1599): ClientImplAidl::ParseNotifyDispDumpReady()
+02-07 10:05:44.876 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.886 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.892 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+02-07 10:05:44.895 D/libsensor-parseRGB( 1599): the value of RGB [37.233216 36.847102 35.480600]
+02-07 10:05:44.897 I/PlayGamesServices[GamesSyncAdapter](23728): Starting sync for 29665a57
+02-07 10:05:44.898 I/libPerfCtl( 1033): xgfGetFPS pid:2674 fps:-1
+02-07 10:05:44.898 I/libPerfCtl( 1033): xgfGetFPS pid:16701 fps:-1
+02-07 10:05:44.900 I/PlayGamesServices[GamesSyncAdapter](23728): Sync duration for 29665a57: 3
+02-07 10:05:44.905 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.905 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.907 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.907 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.907 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.908 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.908 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.908 W/PlayGamesServices[DataBroker](23728): No player ID found when refreshing
+02-07 10:05:44.910 W/PlayGamesServices[UiUtils](23728): AppVersion: Cannot find the installed destination app.
+02-07 10:05:44.910 W/PlayGamesServices[UiUtils](23728): AppVersionName: Cannot find the installed destination app.
+02-07 10:05:44.911 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.913 I/NetworkScheduler.Stats(23811): (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+02-07 10:05:44.918 D/Aurogon ( 1877):  packageName = com.google.android.gms isAllowWakeUpList 
+02-07 10:05:44.951 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[4]  
+02-07 10:05:44.973 I/libsensor-displayalgo( 1599): the value of channelCali C:431.724973,R:255.440415,G:158.001853,B:59.821066,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:44.973 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2857.901230,G1:2793.105457,B1:2570.278057,R2:2874.273354,G2:2809.079990,B2:2584.991476,R3:2408.096147,G3:2353.497518,B3:2166.537595,R4:3084.605104,G4:3014.686512,B4:2773.964220,EVENT C:345.000000,R:169.000000,G:150.000000,B:60.000000, lux: 0.000000
+02-07 10:05:44.979 I/SmartPower: com.google.android.permissioncontroller/10262(14280)( 1877): background->idle(11006ms) R(service end com.google.android.permissioncontroller/com.android.permissioncontroller.permission.service.PermissionControllerServiceImpl) adj=905.
+02-07 10:05:45.028 D/ArtChoreographerMonitor( 2674): invoke error.
+02-07 10:05:45.072 D/WifiHAL ( 2379): WifiRequest::create vendor command to iface 37, vendor_id=0x1a11, subcmd=0x1200, res=0
+02-07 10:05:45.090 I/WifiHAL ( 2379): LLS RSP: data=0xb4000070fcbd3030, len=4316
+02-07 10:05:45.090 I/WifiHAL ( 2379): LLS check_data_sanity: 1801: current_radio_stat->num_channels=21
+02-07 10:05:45.090 I/WifiHAL ( 2379): LLS check_data_sanity: 1801: current_radio_stat->num_channels=0
+02-07 10:05:45.090 I/WifiHAL ( 2379): LLS check_data_sanity: confirmed_size=4316, len=4316
+02-07 10:05:45.105 I/AmlMiuiThirdPartScorer( 1877): same score, no send
+02-07 10:05:45.108 I/SmartPower: com.google.android.apps.messaging/10168(13173)( 1877): background->idle(3002ms) R(content provider start ContentProviderRecord{9334f7f u0 com.google.android.apps.messaging/.shared.datamodel.provider.sharedstorage.SharedStorageProvider}) adj=200.
+02-07 10:05:45.115 I/android.hardware.graphics.composer@3.2-service( 1007): Sensor: notify citsensorservice to trigger cwb
+02-07 10:05:45.116 I/libsensor-frameBufferManager( 1599): request dump start
+02-07 10:05:45.116 D/libcomposer_ext( 1599): ClientImplAidl::getDispDump(), dpy 1, dst (160, 120), dump_point 1, release_fence -1
+02-07 10:05:45.118 D/libcomposer_ext( 1007): DeviceImplAidl::syncPerform(14), client_handle: 1
+02-07 10:05:45.118 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::ParseGetDispDump()
+02-07 10:05:45.118 D/libcomposer_ext( 1007): DeviceImplAidl::ParseGetDispDump(), dpy 1, dst (160, 120), dump_point 1
+02-07 10:05:45.118 I/hwcomposer( 1007): [HWC] getDispDump(), dpy 1, (822,7,982,127), (160, 120), (1, 2), (-1), (-1), (0xb40000754033c690)  
+02-07 10:05:45.118 I/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), id_crtc 103, id_connector 34, dump_point 1, src(160, 120), dst(160, 120), config 2  
+02-07 10:05:45.118 E/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), disp(1220, 2712)  
+02-07 10:05:45.118 I/hwcomposer( 1007): [DISP_DUMP] setDumpBuf(), dpy(0), src(822, 7, 982, 127), dst(160, 120), (1, 2), -1, (-1), (0xb40000754033c690)  
+02-07 10:05:45.118 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[9]  
+02-07 10:05:45.125 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::NotifyDispDumpReady()
+02-07 10:05:45.126 I/android.hardware.graphics.composer@3.2-service( 1007): Sensor: notify citsensorservice to trigger cwb
+02-07 10:05:45.127 D/libcomposer_ext( 1599): ClientCallbackAidl::asyncPerform(15)
+02-07 10:05:45.127 D/libcomposer_ext( 1599): ClientImplAidl::ParseNotifyDispDumpReady()
+02-07 10:05:45.128 I/libsensor-frameBufferManager( 1599): request dump start
+02-07 10:05:45.128 D/libcomposer_ext( 1599): ClientImplAidl::getDispDump(), dpy 1, dst (160, 120), dump_point 1, release_fence -1
+02-07 10:05:45.131 D/libcomposer_ext( 1007): DeviceImplAidl::syncPerform(14), client_handle: 1
+02-07 10:05:45.132 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::ParseGetDispDump()
+02-07 10:05:45.132 D/libcomposer_ext( 1007): DeviceImplAidl::ParseGetDispDump(), dpy 1, dst (160, 120), dump_point 1
+02-07 10:05:45.132 I/hwcomposer( 1007): [HWC] getDispDump(), dpy 1, (822,7,982,127), (160, 120), (1, 2), (-1), (-1), (0xb40000754033aef0)  
+02-07 10:05:45.132 I/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), id_crtc 103, id_connector 34, dump_point 1, src(160, 120), dst(160, 120), config 2  
+02-07 10:05:45.132 E/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), disp(1220, 2712)  
+02-07 10:05:45.132 I/hwcomposer( 1007): [DISP_DUMP] setDumpBuf(), dpy(0), src(822, 7, 982, 127), dst(160, 120), (1, 2), -1, (-1), (0xb40000754033aef0)  
+02-07 10:05:45.146 D/libsensor-parseRGB( 1599): the value of RGB [37.232813 36.846549 35.480239]
+02-07 10:05:45.167 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[4]  
+02-07 10:05:45.175 I/libsensor-displayalgo( 1599): the value of channelCali C:431.719808,R:255.439744,G:157.998553,B:59.819815,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:45.175 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2857.833166,G1:2793.013224,B1:2570.220443,R2:2874.297716,G2:2809.064798,B2:2584.961126,R3:2408.172452,G3:2353.369171,B3:2166.436279,R4:3084.602723,G4:3014.684778,B4:2773.966569,EVENT C:344.000000,R:170.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:45.184 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::NotifyDispDumpReady()
+02-07 10:05:45.185 D/libcomposer_ext( 1599): ClientCallbackAidl::asyncPerform(15)
+02-07 10:05:45.185 D/libcomposer_ext( 1599): ClientImplAidl::ParseNotifyDispDumpReady()
+02-07 10:05:45.205 D/libsensor-parseRGB( 1599): the value of RGB [37.233927 36.846451 35.480537]
+02-07 10:05:45.275 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:45.276 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:346.000000,R:169.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:45.752 D/ULogGuard( 1490): Monitoring: 17 threads, 0 requests, 0 time-bombs; 2 guards. ResetFlags = 0x7
+02-07 10:05:45.871 E/StatLog:(22131): Send events error=java.lang.RuntimeException: VKApiExecutionException{code=-1, extra=Bundle[{}], method=statEvents.addSAKMobile, executeErrors=null, super=com.vk.api.sdk.exceptions.VKApiExecutionException: Loading error. Please check your internet connection and try again.}
+02-07 10:05:45.899 I/libPerfCtl( 1033): xgfGetFPS pid:2674 fps:-1
+02-07 10:05:45.899 I/libPerfCtl( 1033): xgfGetFPS pid:16701 fps:-1
+02-07 10:05:46.275 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:46.276 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:169.000000,G:150.000000,B:60.000000, lux: 0.000000
+02-07 10:05:46.375 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:46.376 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:169.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:46.428 E/SLM-HAL-SladSocketClient( 1045): connect failed:-1, socket:116, error:No such file or directory
+02-07 10:05:46.428 I/SLM-HAL ( 1045): setSLAUidList 10359,10213,10300,
+02-07 10:05:46.428 I/SLM-HAL-SladSocketClient( 1045): createSocket
+02-07 10:05:46.429 I/SLM-HAL-SladSocketClient( 1045): connectServer /dev/socket/slad
+02-07 10:05:46.475 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:46.475 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:345.000000,R:169.000000,G:151.000000,B:61.000000, lux: 0.000000
+02-07 10:05:46.558 I/AppSearchIcing( 1877): icing-search-engine.cc:2327: Persisting data to disk with mode 3
+02-07 10:05:46.570 I/AppSearchIcing( 1877): icing-search-engine.cc:2340: PersistToDisk completed.
+02-07 10:05:46.575 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:46.575 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:170.000000,G:151.000000,B:61.000000, lux: 0.000000
+02-07 10:05:46.608 I/NetworkAccelerateSwitchService( 1877): EVENT_RSSI_POLL. mRssiPoll=true
+02-07 10:05:46.609 I/NetworkAccelerateSwitchService( 1877): getAverageWifiRssi:54
+02-07 10:05:46.609 D/NetworkAccelerateSwitchService( 1877): checkIntervalModeChange mMovementState:0 mIntervalMode:0 mIsBadLinkLayerQoE:false mBadLinkLayerQoETimes = 0
+02-07 10:05:46.652 D/UidObserver( 7095): onUidIdle uid=10059 uidstate=100
+02-07 10:05:46.675 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:46.676 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:343.000000,R:169.000000,G:151.000000,B:61.000000, lux: 0.000000
+02-07 10:05:46.774 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:46.775 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:169.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:46.875 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:46.876 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:343.000000,R:169.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:46.899 I/libPerfCtl( 1033): xgfGetFPS pid:2674 fps:-1
+02-07 10:05:46.900 I/libPerfCtl( 1033): xgfGetFPS pid:16701 fps:-1
+02-07 10:05:46.975 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:46.976 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:345.000000,R:168.000000,G:152.000000,B:61.000000, lux: 0.000000
+02-07 10:05:47.075 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.075 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:345.000000,R:169.000000,G:152.000000,B:61.000000, lux: 0.000000
+02-07 10:05:47.175 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.176 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:169.000000,G:151.000000,B:61.000000, lux: 0.000000
+02-07 10:05:47.255 D/ccci_mdinit( 1125): (1):monitor_time_update_thread round:2449 ########
+02-07 10:05:47.275 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.276 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:168.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:47.375 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.375 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:346.000000,R:169.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:05:47.476 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.476 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:345.000000,R:169.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:47.487 D/HeapUsage Monitor( 1877): HeapAllocSize : 128MB; monitorSize : 500MB
+02-07 10:05:47.488 D/AES     ( 1877): AEEIOCTL_GET/SET_SF_STATE IOCTL,cmd= 1074294797, lParam=0. 
+02-07 10:05:47.488 D/AES     ( 1877): AEEIOCTL_RT_MON_Kick IOCTL,cmd= 2147774474, lParam=300. 
+02-07 10:05:47.575 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.576 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:169.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:47.675 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.676 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:170.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:47.774 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.775 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:168.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:47.796 D/[BT]    (  997): mtk_bt_op: BT_VND_OP_LPM_WAKE_SET_STATE
+02-07 10:05:47.875 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.876 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:345.000000,R:170.000000,G:151.000000,B:61.000000, lux: 0.000000
+02-07 10:05:47.975 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:47.976 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:345.000000,R:170.000000,G:152.000000,B:60.000000, lux: 0.000000
+02-07 10:05:48.075 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:48.076 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:169.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:48.108 D/WifiHAL ( 2379): WifiRequest::create vendor command to iface 37, vendor_id=0x1a11, subcmd=0x1200, res=0
+02-07 10:05:48.121 I/WifiHAL ( 2379): LLS RSP: data=0xb4000070fcbd3030, len=4316
+02-07 10:05:48.121 I/WifiHAL ( 2379): LLS check_data_sanity: 1801: current_radio_stat->num_channels=21
+02-07 10:05:48.121 I/WifiHAL ( 2379): LLS check_data_sanity: 1801: current_radio_stat->num_channels=0
+02-07 10:05:48.121 I/WifiHAL ( 2379): LLS check_data_sanity: confirmed_size=4316, len=4316
+02-07 10:05:48.137 I/AmlMiuiThirdPartScorer( 1877): same score, no send
+02-07 10:05:48.175 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:48.175 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:344.000000,R:169.000000,G:151.000000,B:61.000000, lux: 0.000000
+02-07 10:05:48.275 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:48.276 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:345.000000,R:170.000000,G:151.000000,B:61.000000, lux: 0.000000
+02-07 10:05:48.374 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:48.375 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:345.000000,R:169.000000,G:152.000000,B:61.000000, lux: 0.000000
+02-07 10:05:48.475 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:05:48.476 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2858.021252,G1:2792.997000,B1:2570.267983,R2:2874.289657,G2:2809.094462,B2:2584.961628,R3:2407.963130,G3:2353.389632,B3:2166.352694,R4:3084.602790,G4:3014.682451,B4:2773.959845,EVENT C:342.000000,R:168.000000,G:151.000000,B:60.000000, lux: 0.000000
+02-07 10:05:48.575 I/libsensor-displayalgo( 1599): the value of channelCali C:431.720713,R:255.439862,G:157.999185,B:59.819935,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+--
+02-07 10:06:23.684 D/OzonJobAccessibility( 6934): Search Field not found. Dumping hierarchy (State: FIND_SEARCH_FIELD):
+02-07 10:06:23.685 D/OzonJobAccessibility( 6934):  Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.685 D/OzonJobAccessibility( 6934):    Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.685 D/OzonJobAccessibility( 6934):      Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.686 D/OzonJobAccessibility( 6934):        Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/action_bar_root, Clickable: false
+02-07 10:06:23.686 D/OzonJobAccessibility( 6934):          Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: android:id/content, Clickable: false
+02-07 10:06:23.687 D/OzonJobAccessibility( 6934):            Class: androidx.compose.ui.platform.ComposeView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.687 D/OzonJobAccessibility( 6934):              Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.688 D/OzonJobAccessibility( 6934):                Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.688 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.688 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.689 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.689 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.690 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.690 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тариф +50%', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.690 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Жуковский', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.691 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈16 230 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.691 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 352 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.691 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.692 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.692 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '140182 Россия, Московская обл., г.о. Жуковский, г.Жуковский, р-н Замоскворечье, д.457, стр.5', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.692 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.692 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.693 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.693 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.693 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.693 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.694 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '+6 дней', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.694 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.694 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Записаться', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.694 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.695 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.695 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'О складе', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.695 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Казань', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈14 121 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 176 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.696 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '422527, Республика Татарстан, Зеленодольский район, г. Зеленодольск, 19', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:06:23.697 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Карта', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Выберите склад', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '860 объектов', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                  Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.698 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Вид услуг', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тип склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Есть автобус', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Высокий тариф', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.699 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTab, Clickable: true
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Записи', Desc: 'calendarTab', ID: ru.ozon.hire:id/calendarTabText, Clickable: false
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTabIcon, Clickable: false
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTab, Clickable: true
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Выплаты', Desc: 'walletTab', ID: ru.ozon.hire:id/walletTabText, Clickable: false
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTabIcon, Clickable: false
+02-07 10:06:23.700 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTab, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Склады', Desc: 'warehouseTab', ID: ru.ozon.hire:id/warehouseTabText, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTabIcon, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTab, Clickable: true
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Поездки', Desc: 'tripsTab', ID: ru.ozon.hire:id/tripsTabText, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTabIcon, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTab, Clickable: true
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Курсы', Desc: 'coursesTab', ID: ru.ozon.hire:id/coursesTabText, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTabIcon, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.701 D/OzonJobAccessibility( 6934):    Class: android.view.View, Text: 'null', Desc: 'null', ID: android:id/navigationBarBackground, Clickable: false
+02-07 10:06:23.702 E/FileUtils( 6934): err write to mi_exception_log
+02-07 10:06:23.702 V/OzonJobAccessibility( 6934): onAccessibilityEvent: type=2048, package=com.android.systemui, isCheckRequested=true
+02-07 10:06:23.705 D/OzonJobAccessibility( 6934): Event from: com.android.systemui, Root Pkg: ru.ozon.hire, Class: android.widget.FrameLayout
+02-07 10:06:23.726 D/OzonJobAccessibility( 6934): Search Field not found. Dumping hierarchy (State: FIND_SEARCH_FIELD):
+02-07 10:06:23.726 D/OzonJobAccessibility( 6934):  Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.726 D/OzonJobAccessibility( 6934):    Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.726 D/OzonJobAccessibility( 6934):      Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):        Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/action_bar_root, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):          Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: android:id/content, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):            Class: androidx.compose.ui.platform.ComposeView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):              Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):                Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.727 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тариф +50%', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Жуковский', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈16 230 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 352 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.728 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '140182 Россия, Московская обл., г.о. Жуковский, г.Жуковский, р-н Замоскворечье, д.457, стр.5', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.728 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.729 D/ArtChoreographerMonitor( 2674): invoke error.
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '+6 дней', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Записаться', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.729 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'О складе', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Казань', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.730 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈14 121 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.731 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 176 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.731 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.731 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.731 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '422527, Республика Татарстан, Зеленодольский район, г. Зеленодольск, 19', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.731 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.731 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.732 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Карта', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Выберите склад', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '860 объектов', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                  Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Вид услуг', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.733 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тип склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Есть автобус', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Высокий тариф', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.734 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.735 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.735 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTab, Clickable: true
+02-07 10:06:23.735 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Записи', Desc: 'calendarTab', ID: ru.ozon.hire:id/calendarTabText, Clickable: false
+02-07 10:06:23.735 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTabIcon, Clickable: false
+02-07 10:06:23.735 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.735 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTab, Clickable: true
+02-07 10:06:23.735 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Выплаты', Desc: 'walletTab', ID: ru.ozon.hire:id/walletTabText, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTabIcon, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTab, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Склады', Desc: 'warehouseTab', ID: ru.ozon.hire:id/warehouseTabText, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTabIcon, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTab, Clickable: true
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Поездки', Desc: 'tripsTab', ID: ru.ozon.hire:id/tripsTabText, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTabIcon, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTab, Clickable: true
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Курсы', Desc: 'coursesTab', ID: ru.ozon.hire:id/coursesTabText, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTabIcon, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.736 D/OzonJobAccessibility( 6934):    Class: android.view.View, Text: 'null', Desc: 'null', ID: android:id/navigationBarBackground, Clickable: false
+02-07 10:06:23.739 V/OzonJobAccessibility( 6934): onAccessibilityEvent: type=2048, package=com.android.systemui, isCheckRequested=true
+02-07 10:06:23.745 D/OzonJobAccessibility( 6934): Event from: com.android.systemui, Root Pkg: ru.ozon.hire, Class: android.widget.FrameLayout
+02-07 10:06:23.771 D/OzonJobAccessibility( 6934): Search Field not found. Dumping hierarchy (State: FIND_SEARCH_FIELD):
+02-07 10:06:23.772 D/OzonJobAccessibility( 6934):  Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.772 D/OzonJobAccessibility( 6934):    Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.772 D/OzonJobAccessibility( 6934):      Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.773 D/OzonJobAccessibility( 6934):        Class: android.widget.LinearLayout, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/action_bar_root, Clickable: false
+02-07 10:06:23.773 D/OzonJobAccessibility( 6934):          Class: android.widget.FrameLayout, Text: 'null', Desc: 'null', ID: android:id/content, Clickable: false
+02-07 10:06:23.774 D/OzonJobAccessibility( 6934):            Class: androidx.compose.ui.platform.ComposeView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.774 D/OzonJobAccessibility( 6934):              Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.774 D/OzonJobAccessibility( 6934):                Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.774 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.775 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.775 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.775 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.775 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.775 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тариф +50%', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.776 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Жуковский', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.776 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈16 230 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.777 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 352 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.777 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.778 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.778 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '140182 Россия, Московская обл., г.о. Жуковский, г.Жуковский, р-н Замоскворечье, д.457, стр.5', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.778 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.779 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.780 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.780 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.780 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.780 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.781 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '+6 дней', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.781 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.781 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Записаться', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.781 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.781 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.782 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'О складе', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.782 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.782 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:06:23.782 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.782 D/OzonJobAccessibility( 6934):                    Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.783 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.783 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Есть автобусы', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Казань', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈14 121 ₽ / 12 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '≈1 176 ₽ / 1 ч', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'КРУПНЫЙ СКЛАД', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4,1', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '422527, Республика Татарстан, Зеленодольский район, г. Зеленодольск, 19', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Построить маршрут до склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Даты:', Desc: 'null', ID: HireText.Text, Clickable: false
+02-07 10:06:23.784 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Сегодня', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.785 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Завтра', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.785 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.785 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.785 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.785 D/OzonJobAccessibility( 6934):                      Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: WarehouseFavoriteSelectedButton, Clickable: true
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Карта', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                  Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: 'Выберите склад', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '860 объектов', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                    Class: android.widget.Button, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                    Class: android.widget.TextView, Text: '4', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                  Class: android.widget.HorizontalScrollView, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.786 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Вид услуг', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Тип склада', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Есть автобус', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.widget.TextView, Text: 'Высокий тариф', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: true
+02-07 10:06:23.787 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                  Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                    Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTab, Clickable: true
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Записи', Desc: 'calendarTab', ID: ru.ozon.hire:id/calendarTabText, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/calendarTabIcon, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTab, Clickable: true
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Выплаты', Desc: 'walletTab', ID: ru.ozon.hire:id/walletTabText, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/walletTabIcon, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTab, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Склады', Desc: 'warehouseTab', ID: ru.ozon.hire:id/warehouseTabText, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/warehouseTabIcon, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTab, Clickable: true
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Поездки', Desc: 'tripsTab', ID: ru.ozon.hire:id/tripsTabText, Clickable: false
+02-07 10:06:23.788 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/tripsTabIcon, Clickable: false
+02-07 10:06:23.789 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.789 D/OzonJobAccessibility( 6934):                      Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTab, Clickable: true
+02-07 10:06:23.789 D/OzonJobAccessibility( 6934):                        Class: android.widget.TextView, Text: 'Курсы', Desc: 'coursesTab', ID: ru.ozon.hire:id/coursesTabText, Clickable: false
+02-07 10:06:23.789 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: ru.ozon.hire:id/coursesTabIcon, Clickable: false
+02-07 10:06:23.789 D/OzonJobAccessibility( 6934):                        Class: android.view.View, Text: 'null', Desc: 'null', ID: null, Clickable: false
+02-07 10:06:23.789 D/OzonJobAccessibility( 6934):    Class: android.view.View, Text: 'null', Desc: 'null', ID: android:id/navigationBarBackground, Clickable: false
+02-07 10:06:24.407 D/WifiHAL ( 2379): WifiRequest::create vendor command to iface 37, vendor_id=0x1a11, subcmd=0x1200, res=0
+02-07 10:06:24.413 I/WifiHAL ( 2379): LLS RSP: data=0xb4000070fcbd3030, len=4316
+02-07 10:06:24.413 I/WifiHAL ( 2379): LLS check_data_sanity: 1801: current_radio_stat->num_channels=21
+02-07 10:06:24.414 I/WifiHAL ( 2379): LLS check_data_sanity: 1801: current_radio_stat->num_channels=0
+02-07 10:06:24.414 I/WifiHAL ( 2379): LLS check_data_sanity: confirmed_size=4316, len=4316
+02-07 10:06:24.428 I/AmlMiuiThirdPartScorer( 1877): same score, no send
+02-07 10:06:24.434 D/ArtChoreographerMonitor( 2674): invoke error.
+02-07 10:06:24.460 I/android.hardware.graphics.composer@3.2-service( 1007): Sensor: notify citsensorservice to trigger cwb
+02-07 10:06:24.461 I/libsensor-frameBufferManager( 1599): request dump start
+02-07 10:06:24.461 D/libcomposer_ext( 1599): ClientImplAidl::getDispDump(), dpy 1, dst (160, 120), dump_point 1, release_fence -1
+02-07 10:06:24.462 D/libcomposer_ext( 1007): DeviceImplAidl::syncPerform(14), client_handle: 1
+02-07 10:06:24.463 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::ParseGetDispDump()
+02-07 10:06:24.463 D/libcomposer_ext( 1007): DeviceImplAidl::ParseGetDispDump(), dpy 1, dst (160, 120), dump_point 1
+02-07 10:06:24.463 I/hwcomposer( 1007): [HWC] getDispDump(), dpy 1, (822,7,982,127), (160, 120), (1, 2), (-1), (-1), (0xb40000754033aef0)  
+02-07 10:06:24.464 I/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), id_crtc 103, id_connector 34, dump_point 1, src(160, 120), dst(160, 120), config 2  
+02-07 10:06:24.464 E/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), disp(1220, 2712)  
+02-07 10:06:24.464 I/hwcomposer( 1007): [DISP_DUMP] setDumpBuf(), dpy(0), src(822, 7, 982, 127), dst(160, 120), (1, 2), -1, (-1), (0xb40000754033aef0)  
+02-07 10:06:24.464 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[9]  
+02-07 10:06:24.471 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::NotifyDispDumpReady()
+02-07 10:06:24.472 D/libcomposer_ext( 1599): ClientCallbackAidl::asyncPerform(15)
+02-07 10:06:24.472 D/libcomposer_ext( 1599): ClientImplAidl::ParseNotifyDispDumpReady()
+02-07 10:06:24.487 D/libsensor-parseRGB( 1599): the value of RGB [37.468191 37.080069 35.704989]
+02-07 10:06:24.561 I/libPerfCtl( 1033): xgfGetFPS pid:2674 fps:-1
+02-07 10:06:24.576 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:24.577 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:172.000000,G:154.000000,B:61.000000, lux: 0.000000
+02-07 10:06:24.588 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[4]  
+02-07 10:06:24.603 D/ArtChoreographerMonitor( 2674): invoke error.
+02-07 10:06:24.607 I/hwcomposer( 1007): [HWCDisplay] [Display_0 (type:1, mode:2)] fps:4.810099,dur:1039.48,max:779.41,min:14.34  
+02-07 10:06:24.726 E/msys    (21652): E[N mns]_OnDiskCacheGetData(632)=>Start post callback cache refresh DNS resolution
+02-07 10:06:24.740 E/msys    (21652): E[N mns]_LogError(228)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+02-07 10:06:24.741 E/msys    (21652): E[N mns]_OnDiskCacheGetData(632)=>Start post callback cache refresh DNS resolution
+02-07 10:06:24.743 E/msys    (21652): E[N mns]_LogError(228)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+02-07 10:06:24.758 D/SLM-SRV-SLAService( 1877): checktemp temperature = 36426 temperature_average = 36513 isPerformanceMode = false thermal_enable_slm = true
+02-07 10:06:24.769 D/ULogGuard( 1490): Monitoring: 17 threads, 0 requests, 0 time-bombs; 2 guards. ResetFlags = 0x7
+02-07 10:06:25.561 I/libPerfCtl( 1033): xgfGetFPS pid:2674 fps:-1
+02-07 10:06:25.576 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:25.576 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:352.000000,R:172.000000,G:154.000000,B:62.000000, lux: 0.000000
+02-07 10:06:25.655 I/NetworkAccelerateSwitchService( 1877): EVENT_RSSI_POLL. mRssiPoll=true
+02-07 10:06:25.656 I/NetworkAccelerateSwitchService( 1877): getAverageWifiRssi:52
+02-07 10:06:25.656 D/NetworkAccelerateSwitchService( 1877): checkIntervalModeChange mMovementState:0 mIntervalMode:0 mIsBadLinkLayerQoE:false mBadLinkLayerQoETimes = 0
+02-07 10:06:25.675 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:25.675 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:173.000000,G:153.000000,B:62.000000, lux: 0.000000
+02-07 10:06:25.686 I/DGW     (12837): I[notifyStreamGroupError:1768] StreamGroupTransport[notifgateway] notify StreamGroup error: Error Domain=MNSSecureTCP Code=5 UserInfo=0xb400007d24f6b780 {MCFErrorDirectLocalizedFailureReasonKey=mbedtls_ssl_read(): NET - Connection was reset by peer (-0x0050)}
+02-07 10:06:25.776 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:25.777 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:172.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:25.875 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:25.875 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:350.000000,R:172.000000,G:154.000000,B:62.000000, lux: 0.000000
+02-07 10:06:25.975 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:25.975 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:352.000000,R:172.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:26.043 W/Settings( 2653): Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+02-07 10:06:26.046 W/Settings( 2653): Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+02-07 10:06:26.056 D/MiuiTelephonyDFS( 2653): msg.what = 2
+02-07 10:06:26.056 D/MiuiTelephonyDFS( 2653): getVoiceRat = 13
+02-07 10:06:26.057 D/NetworkSpeedTracker( 2653): updateSignalInfo lteRsrp=-99lteSnr=8,phoneId=0
+02-07 10:06:26.057 D/MiuiTelephonyDFS( 2653): getRsrp = -99
+02-07 10:06:26.058 D/MiuiTelephonyDFS( 2653): getVoiceRat = 13
+02-07 10:06:26.058 D/MiuiTelephonyDFS( 2653): getSnr = 8
+02-07 10:06:26.058 D/SelfStudyController( 2653): handleMessage msg.what is 1035
+02-07 10:06:26.064 D/MiuiTelephonyDFS( 2653): msg.what = 2
+02-07 10:06:26.064 D/MiuiTelephonyDFS( 2653): getVoiceRat = 13
+02-07 10:06:26.064 D/MiuiTelephonyDFS( 2653): getRsrp = -99
+02-07 10:06:26.064 D/MiuiTelephonyDFS( 2653): getVoiceRat = 13
+02-07 10:06:26.064 D/MiuiTelephonyDFS( 2653): getSnr = 8
+02-07 10:06:26.064 D/NetworkSpeedTracker( 2653): updateSignalInfo lteRsrp=-99lteSnr=8,phoneId=0
+02-07 10:06:26.064 D/SelfStudyController( 2653): handleMessage msg.what is 1035
+02-07 10:06:26.075 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.075 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:172.000000,G:154.000000,B:63.000000, lux: 0.000000
+02-07 10:06:26.174 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.175 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:350.000000,R:172.000000,G:154.000000,B:61.000000, lux: 0.000000
+02-07 10:06:26.275 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.276 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:350.000000,R:172.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:26.375 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.376 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:350.000000,R:172.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:26.448 E/SLM-HAL-SladSocketClient( 1045): connect failed:-1, socket:118, error:No such file or directory
+02-07 10:06:26.449 I/SLM-HAL ( 1045): setSLAUidList 10359,10213,10300,
+02-07 10:06:26.449 I/SLM-HAL-SladSocketClient( 1045): createSocket
+02-07 10:06:26.449 I/SLM-HAL-SladSocketClient( 1045): connectServer /dev/socket/slad
+02-07 10:06:26.475 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.475 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:172.000000,G:154.000000,B:62.000000, lux: 0.000000
+02-07 10:06:26.561 I/libPerfCtl( 1033): xgfGetFPS pid:2674 fps:-1
+02-07 10:06:26.576 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.576 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:173.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:26.676 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.676 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:349.000000,R:172.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:26.775 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.775 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:350.000000,R:173.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:26.875 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.876 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:173.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:26.949 E/MQTTBypassDGWStreamGroupConnection.cpp(21652): connect failed. Callbacks terminated before ack received
+02-07 10:06:26.953 E/MQTTBypassDGWStreamGroupCallbacks.cpp(21652): onStreamGroupError StreamGroupNetworkRequest request cancelled: max retries reached; last err (TransientError domain: MNSSecureTCP code: 1 detail: SecureTCP connection establish timeout)
+02-07 10:06:26.955 W/MQTTBypassDGWStreamGroupConnection.cpp(21652): Restarting due to reason: StreamError
+02-07 10:06:26.976 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:26.976 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:352.000000,R:173.000000,G:154.000000,B:62.000000, lux: 0.000000
+02-07 10:06:27.074 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:27.075 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:350.000000,R:172.000000,G:153.000000,B:63.000000, lux: 0.000000
+02-07 10:06:27.121 W/RealtimeClientManager(21652): Channel state: MqttChannelState{mConnectionState=CONNECTING, mDisconnectionReason=null, mLastConnectionMs=48087616, mLastDisconnectMs=49960830}
+02-07 10:06:27.175 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:27.176 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:172.000000,G:154.000000,B:62.000000, lux: 0.000000
+02-07 10:06:27.191 I/DGW     (12837): I[sendRequest:90] StreamGroupConnectivityAwareNetworkLayer[notifgateway] processing request with connection state: 1
+02-07 10:06:27.192 I/DGW     (12837): I[sendRequest:110] StreamGroupMNSNetworkLayer[notifgateway] DGW Connecting to https://z-m-gateway.facebook.com/notifgateway
+02-07 10:06:27.275 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:27.276 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:172.000000,G:153.000000,B:62.000000, lux: 0.000000
+02-07 10:06:27.310 I/GoLog   (13455): from tcp:127.0.0.1:59796 accepted tcp:57.144.222.3:443 [socks >> proxy]
+02-07 10:06:27.375 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:27.376 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:351.000000,R:173.000000,G:154.000000,B:61.000000, lux: 0.000000
+02-07 10:06:27.430 D/WifiHAL ( 2379): WifiRequest::create vendor command to iface 37, vendor_id=0x1a11, subcmd=0x1200, res=0
+02-07 10:06:27.436 I/WifiHAL ( 2379): LLS RSP: data=0xb4000070fcbd3030, len=4316
+02-07 10:06:27.437 I/WifiHAL ( 2379): LLS check_data_sanity: 1801: current_radio_stat->num_channels=21
+02-07 10:06:27.437 I/WifiHAL ( 2379): LLS check_data_sanity: 1801: current_radio_stat->num_channels=0
+02-07 10:06:27.437 I/WifiHAL ( 2379): LLS check_data_sanity: confirmed_size=4316, len=4316
+02-07 10:06:27.457 I/AmlMiuiThirdPartScorer( 1877): same score, no send
+02-07 10:06:27.459 I/NetworkBoostStatusManager( 1877): handle: 102
+02-07 10:06:27.461 I/NetworkBoostStatusManager( 1877): interfaceOnCapabilitiesChanged interface name:wlan0
+02-07 10:06:27.467 D/ArtChoreographerMonitor( 2674): invoke error.
+02-07 10:06:27.470 I/NetBusNetworkMonitor( 8660): onCapabilitiesChanged isPrimary = true
+02-07 10:06:27.473 I/libsensor-displayalgo( 1599): the value of channelCali C:438.153778,R:258.984181,G:160.528691,B:60.919798,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:27.473 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.730592,G1:2832.103918,B1:2606.175095,R2:2928.590986,G2:2862.153002,B2:2633.764982,R3:2496.838184,G3:2439.888898,B3:2245.624542,R4:3086.477759,G4:3016.522882,B4:2775.650655,EVENT C:350.000000,R:172.000000,G:153.000000,B:62.000000, lux: 0.000000
+02-07 10:06:27.476 I/BufferQueueProducer( 1114): [StatusBar#109](this:0xb400007945e24b20,id:-1,api:0,p:-1,c:1114) queueBuffer: fps=0.51 dur=3911.47 max=3024.82 min=886.66
+02-07 10:06:27.478 W/JobService(16507): onNetworkChanged() not implemented in androidx.work.impl.background.systemjob.SystemJobService. Must override in a subclass.
+02-07 10:06:27.479 W/Settings( 8121): Setting device_provisioned has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
+02-07 10:06:27.480 I/hwcomposer( 1007): [HWCDisplay] [Display_0 (type:1, mode:2)] fps:0.348120,dur:2872.57,max:2872.57,min:2872.57  
+02-07 10:06:27.480 I/JoyoseCloudControlManager3( 8121): network metered changed, network metered: false, deviceProvisioned: true, scAllowConn: true, try to setNetworkAccessEnabled: true
+02-07 10:06:27.480 I/android.hardware.graphics.composer@3.2-service( 1007): Sensor: notify citsensorservice to trigger cwb
+02-07 10:06:27.481 I/libsensor-frameBufferManager( 1599): request dump start
+02-07 10:06:27.481 D/libcomposer_ext( 1599): ClientImplAidl::getDispDump(), dpy 1, dst (160, 120), dump_point 1, release_fence -1
+02-07 10:06:27.482 I/NetBusNetworkMonitor( 8660): gateway=192.*.*.1
+02-07 10:06:27.483 I/BugleRcsEngine(12469): handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[e20fc03e-da87]>Handler" thread_id=3813 ]
+02-07 10:06:27.484 I/NearbyMediums(23811): [WifiNetworkV2] defaultNetworkCallback onCapabilitiesChanged network:110 [ WIFI VPN ] isNonBypassable:true
+02-07 10:06:27.485 I/BugleRcsEngine(12469): Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=3810 ]
+02-07 10:06:27.486 I/ClipboardServiceI( 1877): checkProviderWakePathForClipboard: com.google.android.apps.messagingis not a activePermissionOwner
+02-07 10:06:27.486 I/SmartPower: com.google.android.apps.messaging/10168(13173)( 1877): idle->background(33323ms) R(content provider start ContentProviderRecord{9334f7f u0 com.google.android.apps.messaging/.shared.datamodel.provider.sharedstorage.SharedStorageProvider}) adj=200.
+02-07 10:06:27.487 I/NetBusNetworkMonitor( 8660): addConnectNetworkInterface mediumType:256, detail:NetworkDetailInfo{mIsConnected=false, mIsSupportTdls=true, mNetworkType=0, mIpAddress=192.*.*.107, mIfName=wlan0, mGateway=192.*.*.1, mNetmask=255.*.*.0, mSsid=T**62}
+02-07 10:06:27.487 I/NetBusNetworkMonitor( 8660): onCapabilitiesChanged handle=462967197709, mediumType=256, ifName=wlan0
+02-07 10:06:27.492 D/libcomposer_ext( 1007): DeviceImplAidl::syncPerform(14), client_handle: 1
+02-07 10:06:27.492 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::ParseGetDispDump()
+02-07 10:06:27.492 D/libcomposer_ext( 1007): DeviceImplAidl::ParseGetDispDump(), dpy 1, dst (160, 120), dump_point 1
+02-07 10:06:27.492 I/hwcomposer( 1007): [HWC] getDispDump(), dpy 1, (822,7,982,127), (160, 120), (1, 2), (-1), (-1), (0xb400007540339990)  
+02-07 10:06:27.492 I/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), id_crtc 103, id_connector 34, dump_point 1, src(160, 120), dst(160, 120), config 2  
+02-07 10:06:27.492 E/hwcomposer( 1007): [DRMDEV] isSupportWbParams(), disp(1220, 2712)  
+02-07 10:06:27.492 I/hwcomposer( 1007): [DISP_DUMP] setDumpBuf(), dpy(0), src(822, 7, 982, 127), dst(160, 120), (1, 2), -1, (-1), (0xb400007540339990)  
+02-07 10:06:27.492 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[9]  
+02-07 10:06:27.503 D/libcomposer_ext( 1007): DeviceImplAidl::DeviceClientContextAidl::NotifyDispDumpReady()
+02-07 10:06:27.504 D/libcomposer_ext( 1599): ClientCallbackAidl::asyncPerform(15)
+02-07 10:06:27.504 D/libcomposer_ext( 1599): ClientImplAidl::ParseNotifyDispDumpReady()
+02-07 10:06:27.523 D/libsensor-parseRGB( 1599): the value of RGB [37.468130 37.079692 35.704499]
+02-07 10:06:27.562 I/libPerfCtl( 1033): xgfGetFPS pid:2674 fps:-1
+02-07 10:06:27.572 I/hwcomposer( 1007): [HWC] (0)fire a callback of refresh to SF[4]  
+02-07 10:06:27.576 I/libsensor-displayalgo( 1599): the value of channelCali C:438.157133,R:258.985727,G:160.529843,B:60.920858,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:27.577 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.720081,G1:2832.040458,B1:2606.096410,R2:2928.618590,G2:2862.193448,B2:2633.819603,R3:2496.938448,G3:2440.009938,B3:2246.057238,R4:3086.477514,G4:3016.523101,B4:2775.650836,EVENT C:349.000000,R:172.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:27.588 I/BufferQueueProducer( 1114): [FramebufferSurface](this:0xb400007a05bd58e0,id:-1,api:1,p:1114,c:1114) queueBuffer: fps=0.51 dur=3911.93 max=2981.73 min=930.19
+02-07 10:06:27.641 D/ArtChoreographerMonitor( 2674): invoke error.
+02-07 10:06:27.691 I/keystore2(  578): system/security/keystore2/src/security_level.rs:227 - entry create_operation
+02-07 10:06:27.691 I/keystore2(  578): system/security/keystore2/src/security_level.rs:232 - key: domain:r#KEY_ID, nspace:6599189047956234565, alias:None, blob:None
+02-07 10:06:27.693 I/keystore2(  578): system/security/keystore2/src/security_level.rs:882 - entry upgrade_keyblob_if_required_with
+02-07 10:06:27.693 I/keystore2(  578): system/security/keystore2/src/security_level.rs:347 - In KeystoreSecurityLevel::create_operation: calling begin
+02-07 10:06:27.694 I/[MITEE] (  581): mitee_keymaster_call 231 4
+02-07 10:06:27.694 E/[MITEE] (  581): Request: 343 Max size: 131072
+02-07 10:06:27.696 I/keystore2(  578): system/security/keystore2/src/security_level.rs:381 - upgraded_blob: None
+02-07 10:06:27.698 I/[MITEE] (  581): mitee_keymaster_call 231 12
+02-07 10:06:27.698 E/[MITEE] (  581): Request: 62 Max size: 131072
+02-07 10:06:27.702 W/DGW     (12837): W[operator():418] DGW Connected to 57.144.222.3
+02-07 10:06:27.771 D/ULogGuard( 1490): Monitoring: 17 threads, 0 requests, 0 time-bombs; 2 guards. ResetFlags = 0x7
+02-07 10:06:27.895 W/DGW     (12837): W[onSuccessfulResponse:862] StreamGroupTransport[notifgateway] on successful response. DGW is now connected.
+02-07 10:06:27.963 E/msys    (21652): E[N mns]_OnDiskCacheGetData(632)=>Start post callback cache refresh DNS resolution
+02-07 10:06:27.974 E/msys    (21652): E[N mns]_LogError(228)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+02-07 10:06:28.562 I/libPerfCtl( 1033): xgfGetFPS pid:2674 fps:-1
+02-07 10:06:28.575 I/libsensor-displayalgo( 1599): the value of channelCali C:438.157133,R:258.985727,G:160.529843,B:60.920858,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:28.576 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.720081,G1:2832.040458,B1:2606.096410,R2:2928.618590,G2:2862.193448,B2:2633.819603,R3:2496.938448,G3:2440.009938,B3:2246.057238,R4:3086.477514,G4:3016.523101,B4:2775.650836,EVENT C:350.000000,R:172.000000,G:154.000000,B:61.000000, lux: 0.000000
+02-07 10:06:28.658 I/NetworkAccelerateSwitchService( 1877): EVENT_RSSI_POLL. mRssiPoll=true
+02-07 10:06:28.659 I/NetworkAccelerateSwitchService( 1877): getAverageWifiRssi:53
+02-07 10:06:28.660 D/NetworkAccelerateSwitchService( 1877): checkIntervalModeChange mMovementState:0 mIntervalMode:0 mIsBadLinkLayerQoE:false mBadLinkLayerQoETimes = 0
+02-07 10:06:28.675 I/libsensor-displayalgo( 1599): the value of channelCali C:438.157133,R:258.985727,G:160.529843,B:60.920858,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:28.675 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.720081,G1:2832.040458,B1:2606.096410,R2:2928.618590,G2:2862.193448,B2:2633.819603,R3:2496.938448,G3:2440.009938,B3:2246.057238,R4:3086.477514,G4:3016.523101,B4:2775.650836,EVENT C:351.000000,R:172.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:28.775 I/libsensor-displayalgo( 1599): the value of channelCali C:438.157133,R:258.985727,G:160.529843,B:60.920858,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:28.776 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.720081,G1:2832.040458,B1:2606.096410,R2:2928.618590,G2:2862.193448,B2:2633.819603,R3:2496.938448,G3:2440.009938,B3:2246.057238,R4:3086.477514,G4:3016.523101,B4:2775.650836,EVENT C:351.000000,R:173.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:28.875 I/libsensor-displayalgo( 1599): the value of channelCali C:438.157133,R:258.985727,G:160.529843,B:60.920858,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:28.876 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.720081,G1:2832.040458,B1:2606.096410,R2:2928.618590,G2:2862.193448,B2:2633.819603,R3:2496.938448,G3:2440.009938,B3:2246.057238,R4:3086.477514,G4:3016.523101,B4:2775.650836,EVENT C:350.000000,R:172.000000,G:153.000000,B:62.000000, lux: 0.000000
+02-07 10:06:28.927 I/MBrainServer( 1405): [INFO] MNetlinkCenter.cpp:230 Run: No data received, ret: -1
+02-07 10:06:28.976 I/libsensor-displayalgo( 1599): the value of channelCali C:438.157133,R:258.985727,G:160.529843,B:60.920858,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:28.977 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.720081,G1:2832.040458,B1:2606.096410,R2:2928.618590,G2:2862.193448,B2:2633.819603,R3:2496.938448,G3:2440.009938,B3:2246.057238,R4:3086.477514,G4:3016.523101,B4:2775.650836,EVENT C:351.000000,R:172.000000,G:154.000000,B:62.000000, lux: 0.000000
+02-07 10:06:29.075 I/libsensor-displayalgo( 1599): the value of channelCali C:438.157133,R:258.985727,G:160.529843,B:60.920858,scales C:1.034756,R:1.004506,G:1.043348,B:0.975870
+02-07 10:06:29.076 D/libsensor-displayalgo( 1599): brightness:317.000000,flat_mode:0.000000,R1:2897.720081,G1:2832.040458,B1:2606.096410,R2:2928.618590,G2:2862.193448,B2:2633.819603,R3:2496.938448,G3:2440.009938,B3:2246.057238,R4:3086.477514,G4:3016.523101,B4:2775.650836,EVENT C:350.000000,R:172.000000,G:153.000000,B:61.000000, lux: 0.000000
+02-07 10:06:29.133 W/HttpCallTransport(24186): Fail read Http response and forward to Cello
+02-07 10:06:29.134 W/HttpCallTransport(24186): Fail read Http response and forward to Cello
+02-07 10:06:29.134 W/HttpCallTransport(24186): Fail read Http response and forward to Cello
+02-07 10:06:29.135 E/Cello   (24186): [24262:NonCelloThread] authenticated_transport.cc:183:DumpToLog Request 0xb400007cd4f3d3d8: 0 transport: drive::ds::Status::UNAVAILABLE_WHILE_OFFLINE reader: drive::ds::Status::SUCCESS url: https://play.googleapis.com/log
+02-07 10:06:29.136 E/Cello   (24186): [24262:NonCelloThread] authenticated_transport.cc:183:DumpToLog req.hdr 0xb400007cd4f3d3d8: Content-Type=
+02-07 10:06:29.137 E/Cello   (24186): [24262:NonCelloThread] authenticated_transport.cc:183:DumpToLog Response body 0xb400007cd4f3d3d8: (no response body)
+02-07 10:06:29.138 E/Cello   (24186): [24270:MetricsTransportThread-CELLO] metrics_transport.cc:242:SendRequest Request failed: drive::ds::Status::UNAVAILABLE_WHILE_OFFLINE
+02-07 10:06:29.138 E/Cello   (24186): [24494:NonCelloThread] authenticated_transport.cc:183:DumpToLog Request 0xb400007cd4f0f858: 0 transport: drive::ds::Status::UNAVAILABLE_WHILE_OFFLINE reader: drive::ds::Status::SUCCESS url: https://play.googleapis.com/log
+02-07 10:06:29.139 E/Cello   (24186): [24494:NonCelloThread] authenticated_transport.cc:183:DumpToLog req.hdr 0xb400007cd4f0f858: Content-Type=
+02-07 10:06:29.139 E/Cello   (24186): [24494:NonCelloThread] authenticated_transport.cc:183:DumpToLog Response body 0xb400007cd4f0f858: (no response body)
+02-07 10:06:29.139 E/Cello   (24186): [24558:NonCelloThread] authenticated_transport.cc:183:DumpToLog Request 0xb400007cd4f22f18: 0 transport: drive::ds::Status::UNAVAILABLE_WHILE_OFFLINE reader: drive::ds::Status::SUCCESS url: https://play.googleapis.com/log
+02-07 10:06:29.139 E/Cello   (24186): [24558:NonCelloThread] authenticated_transport.cc:183:DumpToLog req.hdr 0xb400007cd4f22f18: Content-Type=
+02-07 10:06:29.140 E/Cello   (24186): [24496:MetricsTransportThread-CELLO] metrics_transport.cc:242:SendRequest Request failed: drive::ds::Status::UNAVAILABLE_WHILE_OFFLINE
+02-07 10:06:29.140 E/Cello   (24186): [24558:NonCelloThread] authenticated_transport.cc:183:DumpToLog Response body 0xb400007cd4f22f18: (no response body)
+02-07 10:06:29.140 E/Cello   (24186): [24561:MetricsTransportThread-CELLO] metrics_transport.cc:242:SendRequest Request failed: drive::ds::Status::UNAVAILABLE_WHILE_OFFLINE

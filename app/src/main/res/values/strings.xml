@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AOzonJobTrackerPasynkov</string>
+    <string name="accessibility_service_description">This service monitors Ozon Job to find available slots for selected warehouses.</string>
+</resources>
