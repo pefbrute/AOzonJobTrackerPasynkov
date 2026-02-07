@@ -38,7 +38,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
     }
 
     private var refreshCount = 0
-    private val MAX_REFRESH_ATTEMPTS = 10
+    private val MAX_REFRESH_ATTEMPTS = 5000 // Was 10, now practically infinite
 
     private var currentState = State.IDLE
     private var lastActionTime = 0L

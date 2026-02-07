@@ -59,6 +59,8 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     
+    implementation(libs.okhttp)
+    
     // Room Database
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)

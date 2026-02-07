@@ -27,7 +27,7 @@ class JobMonitoringService : Service() {
     private val handler = Handler(Looper.getMainLooper())
     
     private var isMonitoring = false
-    private val checkIntervalMs = 10 * 60 * 1000L // 10 minutes
+    private val checkIntervalMs = 30 * 1000L // Reduced from 10 minutes to 30 seconds for 'infinite' checking
 
     private val checkRunnable = object : Runnable {
         override fun run() {
@@ -66,6 +66,7 @@ class JobMonitoringService : Service() {
         }
         
         // Listen for slot check results
+        val notificationManager = NotificationManager(this)
         scope.launch {
             OzonJobAccessibilityService.slotStatus.collectLatest { days ->
                 val time = java.text.SimpleDateFormat("HH:mm", java.util.Locale.getDefault()).format(java.util.Date())
@@ -75,6 +76,7 @@ class JobMonitoringService : Service() {
                 } else {
                     lastResult = "No slots ($time)"
                 }
+                notificationManager.notifyCheckResult(days)
                 updateCombinedNotification()
             }
         }

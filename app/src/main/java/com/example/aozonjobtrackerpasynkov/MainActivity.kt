@@ -132,21 +132,53 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 steps = 8 // 0.5s increments
             )
         }
+        
+        Spacer(modifier = Modifier.height(16.dp))
 
-        Spacer(modifier = Modifier.height(8.dp))
+        var tgBotToken by remember { mutableStateOf(sharedPrefs.getString("tg_bot_token", "") ?: "") }
+        var tgChatId by remember { mutableStateOf(sharedPrefs.getString("tg_chat_id", "") ?: "") }
 
-        Text("Action Delay: ${"%.1f".format(actionDelay)}s")
-        Slider(
-            value = actionDelay,
+        Text("Telegram Settings", style = MaterialTheme.typography.titleMedium)
+        TextField(
+            value = tgBotToken,
             onValueChange = { 
-                actionDelay = it
-                sharedPrefs.edit().putFloat("action_delay", it).apply()
+                tgBotToken = it
+                sharedPrefs.edit().putString("tg_bot_token", it).apply()
             },
-            valueRange = 1f..10f,
-            steps = 18 // 0.5s increments
+            label = { Text("Bot Token") },
+            modifier = Modifier.fillMaxWidth()
+        )
+        Spacer(modifier = Modifier.height(4.dp))
+        TextField(
+            value = tgChatId,
+            onValueChange = { 
+                tgChatId = it
+                sharedPrefs.edit().putString("tg_chat_id", it).apply()
+            },
+            label = { Text("Chat ID") },
+            modifier = Modifier.fillMaxWidth()
         )
         
         Spacer(modifier = Modifier.height(8.dp))
+        
+        Button(onClick = {
+            if (tgBotToken.isBlank() || tgChatId.isBlank()) {
+                logs.add(0, "[TG] Error: Token or ID is blank")
+            } else {
+                com.example.aozonjobtrackerpasynkov.network.TelegramClient(tgBotToken, tgChatId)
+                    .sendMessage("Test message from Ozon Job Watcher") { success, error ->
+                        if (success) {
+                            logs.add(0, "[TG] Test message sent!")
+                        } else {
+                            logs.add(0, "[TG] Error: $error")
+                        }
+                    }
+            }
+        }, modifier = Modifier.fillMaxWidth()) {
+            Text("Test Telegram Notification")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
         
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Button(onClick = {
