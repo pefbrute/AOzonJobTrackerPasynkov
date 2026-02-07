@@ -49,15 +49,21 @@ class JobMonitoringService : Service() {
             Log.e(TAG, "Error starting foreground: ${e.message}")
         }
         
-        // Listen for slot status to notify user
+        // Listen for service state to show what bot is doing right now
+        scope.launch {
+            OzonJobAccessibilityService.serviceState.collectLatest { msg ->
+                val time = java.text.SimpleDateFormat("HH:mm:ss", java.util.Locale.getDefault()).format(java.util.Date())
+                updateNotification("[$time] $msg")
+            }
+        }
+        
+        // Listen for final slot status to notify user loudly
         scope.launch {
             OzonJobAccessibilityService.slotStatus.collectLatest { days ->
                 val time = java.text.SimpleDateFormat("HH:mm", java.util.Locale.getDefault()).format(java.util.Date())
                 if (days != null) {
-                    updateNotification("Last check $time: SLOTS FOUND!")
+                    updateNotification("FINISHED: SLOTS FOUND!")
                     sendSlotFoundNotification(days)
-                } else {
-                    updateNotification("Last check $time: No slots found")
                 }
             }
         }

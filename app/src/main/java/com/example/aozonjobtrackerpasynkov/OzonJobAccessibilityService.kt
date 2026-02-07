@@ -15,6 +15,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.channels.BufferOverflow
 import com.example.aozonjobtrackerpasynkov.data.StatsRepository
 
 class OzonJobAccessibilityService : AccessibilityService() {
@@ -71,10 +72,18 @@ class OzonJobAccessibilityService : AccessibilityService() {
         
         private var instance: OzonJobAccessibilityService? = null
         
-        private val _serviceState = MutableSharedFlow<String>(replay = 1)
+        private val _serviceState = MutableSharedFlow<String>(
+            replay = 1,
+            extraBufferCapacity = 5,
+            onBufferOverflow = BufferOverflow.DROP_OLDEST
+        )
         val serviceState = _serviceState.asSharedFlow()
 
-        private val _slotStatus = MutableSharedFlow<String?>(replay = 1)
+        private val _slotStatus = MutableSharedFlow<String?>(
+            replay = 1,
+            extraBufferCapacity = 5,
+            onBufferOverflow = BufferOverflow.DROP_OLDEST
+        )
         val slotStatus = _slotStatus.asSharedFlow()
 
         var isCheckRequested = false
@@ -194,14 +203,23 @@ class OzonJobAccessibilityService : AccessibilityService() {
             val sharedPrefs = getSharedPreferences("OzonPrefs", MODE_PRIVATE)
             val fastRefresh = sharedPrefs.getBoolean("fast_refresh", false)
             
-            // Use specific delay for refresh loop vs normal navigation
             val delaySeconds = if (fastRefresh && (currentState == State.REFRESH_BACK || (currentState == State.CLICK_ENROLL && refreshCount > 0))) {
                 sharedPrefs.getFloat("refresh_delay", 1.5f)
             } else {
                 sharedPrefs.getFloat("action_delay", 3.0f)
             }
             
-            val delayMillis = (delaySeconds * 1000).toLong()
+            // Dynamic acceleration for simple navigation steps
+            val multiplier = when (currentState) {
+                State.TYPE_SEARCH_QUERY -> 0.3f   // Loupe -> Keyboard
+                State.SELECT_WAREHOUSE -> 0.5f    // Typing -> Select card
+                State.CLICK_ENROLL -> 0.4f        // Select -> Enroll button
+                State.FIND_JOB_CARD -> 0.4f       // Enroll -> Job list
+                State.FIND_SEARCH_FIELD -> 0.5f   // Tab -> Loupe
+                else -> 1.0f
+            }
+            
+            val delayMillis = (delaySeconds * 1000 * multiplier).toLong().coerceAtLeast(300L)
 
             // throttle actions to avoid rapid double-clicks and state loops
             if (System.currentTimeMillis() - lastActionTime < delayMillis) return
@@ -219,7 +237,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
                 lastState = currentState
             }
             
-            Log.v(TAG, "processEvent: State=$currentState, RootPkg=${rootNode.packageName}")
+            Log.v(TAG, "processEvent: State=$currentState, Delay=${delayMillis}ms")
 
             when (currentState) {
                 State.BOOTSTRAP_DETECT_AND_ROUTE -> processBootstrapDetectAndRoute(rootNode)
@@ -253,6 +271,8 @@ class OzonJobAccessibilityService : AccessibilityService() {
         // Проверяем, безопасно ли продолжать
         if (!Router.isSafeToAutomate(screenResult)) {
             Log.w(TAG, "Not safe to automate, entering RECOVERY")
+            _serviceState.tryEmit("Unknown screen, recovering...")
+            _slotStatus.tryEmit(null) // Reset status
             currentState = State.RECOVERY
             return
         }
@@ -316,7 +336,9 @@ class OzonJobAccessibilityService : AccessibilityService() {
         // Set lastActionTime to give it time to go back
         lastActionTime = System.currentTimeMillis()
         currentState = State.CLICK_ENROLL 
-        _serviceState.tryEmit("Refreshing... ($refreshCount/10)")
+        val msg = "Fast Refresh ($refreshCount/10)..."
+        _serviceState.tryEmit(msg)
+        _slotStatus.tryEmit(null)
     }
 
     private fun findNodeRecursive(node: AccessibilityNodeInfo, predicate: (AccessibilityNodeInfo) -> Boolean): AccessibilityNodeInfo? {
@@ -407,6 +429,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
     }
 
     private fun processSelectWarehouse(rootNode: AccessibilityNodeInfo) {
+        _serviceState.tryEmit("Searching for $WAREHOUSE_NAME...")
         val target = findNodeRecursive(rootNode) { 
             val text = it.text?.toString() ?: ""
             !it.isEditable && text.equals(WAREHOUSE_NAME, ignoreCase = true)
@@ -450,6 +473,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
     }
 
     private fun processFindJobCard(rootNode: AccessibilityNodeInfo) {
+        _serviceState.tryEmit("Locating $JOB_NAME...")
         val target = findNodeRecursive(rootNode) { 
             it.text?.toString()?.contains(JOB_NAME, ignoreCase = true) == true 
         }
@@ -565,7 +589,10 @@ class OzonJobAccessibilityService : AccessibilityService() {
             if (hasEnroll != null) {
                 hasEnroll.recycle()
                 Log.d(TAG, "Stuck in CHECK_SLOTS but see 'Записаться'. Moving to CLICK_ENROLL.")
+                _serviceState.tryEmit("Stuck? Retrying click...")
                 currentState = State.CLICK_ENROLL
+            } else {
+                _slotStatus.tryEmit(null)
             }
         }
     }
