@@ -21,8 +21,10 @@ class OzonJobAccessibilityService : AccessibilityService() {
     private val job = SupervisorJob()
     private val scope = CoroutineScope(Dispatchers.Main + job)
 
-    private enum class State {
+    enum class State {
         IDLE,
+        BOOTSTRAP_DETECT_AND_ROUTE,  // NEW: Определяем экран и выбираем маршрут
+        RECOVERY,                     // NEW: Восстановление при неизвестном экране
         FIND_WAREHOUSES_TAB,
         FIND_SEARCH_FIELD,
         TYPE_SEARCH_QUERY,
@@ -38,6 +40,12 @@ class OzonJobAccessibilityService : AccessibilityService() {
 
     private var currentState = State.IDLE
     private var lastActionTime = 0L
+    
+    // NEW: Recovery manager для восстановления при неизвестных экранах
+    private var recoveryManager: RecoveryManager? = null
+    
+    // NEW: Счётчик циклов для логирования
+    private var cycleId = 0
 
     override fun onInterrupt() {
         Log.d(TAG, "Service interrupted")
@@ -82,10 +90,25 @@ class OzonJobAccessibilityService : AccessibilityService() {
     }
 
     private fun startCheckCycleInternal() {
+        // Проверяем Safe Mode
+        recoveryManager?.let {
+            if (it.isInSafeMode()) {
+                val remainingMs = it.getSafeModeRemainingMs()
+                Log.w(TAG, "Safe Mode active, remaining: ${remainingMs / 1000}s")
+                _serviceState.tryEmit("Safe Mode (${remainingMs / 1000}s)")
+                return
+            }
+        }
+        
         isCheckRequested = true
         refreshCount = 0
-        currentState = State.FIND_WAREHOUSES_TAB 
-        Log.d(TAG, "Starting check cycle")
+        cycleId++
+        
+        // NEW: Начинаем с определения экрана
+        currentState = State.BOOTSTRAP_DETECT_AND_ROUTE
+        Log.d(TAG, "Starting check cycle #$cycleId with BOOTSTRAP_DETECT_AND_ROUTE")
+        
+        recoveryManager?.resetForNewCycle()
         
         // Kickstart processing without waiting for event
         rootInActiveWindow?.let { 
@@ -97,6 +120,10 @@ class OzonJobAccessibilityService : AccessibilityService() {
         super.onServiceConnected()
         Log.d(TAG, "Service connected")
         instance = this
+        
+        // NEW: Инициализируем RecoveryManager
+        recoveryManager = RecoveryManager(applicationContext, this)
+        
         _serviceState.tryEmit("Service Connected")
     }
 
@@ -184,6 +211,8 @@ class OzonJobAccessibilityService : AccessibilityService() {
             Log.v(TAG, "processEvent: State=$currentState, RootPkg=${rootNode.packageName}")
 
             when (currentState) {
+                State.BOOTSTRAP_DETECT_AND_ROUTE -> processBootstrapDetectAndRoute(rootNode)
+                State.RECOVERY -> processRecovery(rootNode)
                 State.FIND_WAREHOUSES_TAB -> processFindWarehousesTab(rootNode)
                 State.FIND_SEARCH_FIELD -> processFindSearchField(rootNode)
                 State.TYPE_SEARCH_QUERY -> processTypeSearchQuery(rootNode)
@@ -196,6 +225,77 @@ class OzonJobAccessibilityService : AccessibilityService() {
             }
         } catch (e: Exception) {
             Log.e(TAG, "Error in processEvent: ${e.message}")
+        }
+    }
+
+    /**
+     * NEW: Определяет текущий экран и выбирает маршрут к цели
+     */
+    private fun processBootstrapDetectAndRoute(rootNode: AccessibilityNodeInfo) {
+        val screenResult = ScreenDetector.detectScreen(rootNode)
+        
+        Log.i(TAG, "BOOTSTRAP cycle #$cycleId: screen=${screenResult.screenId}, " +
+              "confidence=${screenResult.confidence}, anchors=${screenResult.matchedAnchors}")
+        
+        _serviceState.tryEmit("Detected: ${screenResult.screenId}")
+        
+        // Проверяем, безопасно ли продолжать
+        if (!Router.isSafeToAutomate(screenResult)) {
+            Log.w(TAG, "Not safe to automate, entering RECOVERY")
+            currentState = State.RECOVERY
+            return
+        }
+        
+        // Получаем следующее состояние от Router
+        val nextState = Router.route(screenResult)
+        Log.d(TAG, "Router decision: $nextState")
+        
+        currentState = nextState
+        lastActionTime = System.currentTimeMillis()
+    }
+    
+    /**
+     * NEW: Обработка состояния RECOVERY - восстановление при неизвестном экране
+     */
+    private fun processRecovery(rootNode: AccessibilityNodeInfo) {
+        val manager = recoveryManager ?: run {
+            Log.e(TAG, "RecoveryManager is null!")
+            currentState = State.IDLE
+            return
+        }
+        
+        // Повторно определяем экран
+        val screenResult = ScreenDetector.detectScreen(rootNode)
+        
+        Log.d(TAG, "RECOVERY: screen=${screenResult.screenId}, status=${manager.getStatusString()}")
+        
+        when (val result = manager.executeStep(screenResult)) {
+            is RecoveryManager.RecoveryResult.Success -> {
+                Log.i(TAG, "Recovery SUCCESS! Routing to ${screenResult.screenId}")
+                currentState = Router.route(screenResult)
+                _serviceState.tryEmit("Recovered: ${screenResult.screenId}")
+            }
+            
+            is RecoveryManager.RecoveryResult.Continue -> {
+                // Ждём следующего события
+                lastActionTime = System.currentTimeMillis()
+                _serviceState.tryEmit("Recovery in progress...")
+            }
+            
+            is RecoveryManager.RecoveryResult.SafeModeActivated -> {
+                Log.w(TAG, "SAFE MODE activated!")
+                isCheckRequested = false
+                currentState = State.IDLE
+                _serviceState.tryEmit("Safe Mode ON")
+                // TODO: Отправить уведомление пользователю
+            }
+            
+            is RecoveryManager.RecoveryResult.NeedManualHelp -> {
+                Log.e(TAG, "Manual help required!")
+                isCheckRequested = false
+                currentState = State.IDLE
+                _serviceState.tryEmit("Need manual help")
+            }
         }
     }
 
@@ -399,6 +499,10 @@ class OzonJobAccessibilityService : AccessibilityService() {
                  refreshCount = 0
                  isCheckRequested = false
                  currentState = State.IDLE
+                 
+                 // NEW: Успешный цикл - сбрасываем счётчики провалов
+                 recoveryManager?.onCycleSuccess()
+                 
                  Log.d(TAG, "Check cycle complete. Slots found. Returning Home.")
                  performGlobalAction(GLOBAL_ACTION_HOME)
             } else {
@@ -416,6 +520,10 @@ class OzonJobAccessibilityService : AccessibilityService() {
                      refreshCount = 0
                      isCheckRequested = false
                      currentState = State.IDLE
+                     
+                     // NEW: Цикл завершён без слотов - это не провал, сбрасываем счётчики
+                     recoveryManager?.onCycleSuccess()
+                     
                      performGlobalAction(GLOBAL_ACTION_HOME)
                  }
             }
