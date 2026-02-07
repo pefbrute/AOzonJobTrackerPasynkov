@@ -42,6 +42,8 @@ class OzonJobAccessibilityService : AccessibilityService() {
 
     private var currentState = State.IDLE
     private var lastActionTime = 0L
+    private var lastDumpTime = 0L
+    private val DUMP_INTERVAL = 10000L // 10 seconds
     
     // NEW: Recovery manager для восстановления при неизвестных экранах
     private var recoveryManager: RecoveryManager? = null
@@ -54,6 +56,23 @@ class OzonJobAccessibilityService : AccessibilityService() {
     
     // NEW: Repository для записи статистики
     private var statsRepository: StatsRepository? = null
+    
+    // Watchdog для периодического «пинка» если события перестали приходить
+    private val watchdogHandler = android.os.Handler(android.os.Looper.getMainLooper())
+    private var lastStateSyncTime = 0L
+    private var lastProgressTime = 0L // Время последнего успешного действия или обнаружения цели
+    
+    private val watchdogRunnable = object : Runnable {
+        override fun run() {
+            if (isCheckRequested && currentState != State.IDLE) {
+                rootInActiveWindow?.let { 
+                    Log.v(TAG, "Watchdog: kickstarting processEvent (Current State: $currentState)")
+                    processEvent(it) 
+                }
+            }
+            watchdogHandler.postDelayed(this, 2500) // Раз в 2.5 секунды
+        }
+    }
 
     override fun onInterrupt() {
         Log.d(TAG, "Service interrupted")
@@ -125,6 +144,9 @@ class OzonJobAccessibilityService : AccessibilityService() {
         currentState = State.BOOTSTRAP_DETECT_AND_ROUTE
         Log.d(TAG, "Starting check cycle #$cycleId with BOOTSTRAP_DETECT_AND_ROUTE")
         
+        lastProgressTime = System.currentTimeMillis()
+        lastStateSyncTime = System.currentTimeMillis()
+        
         recoveryManager?.resetForNewCycle()
         
         // Kickstart processing without waiting for event
@@ -144,6 +166,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
         // NEW: Инициализируем StatsRepository
         statsRepository = StatsRepository.getInstance(applicationContext)
         
+        watchdogHandler.post(watchdogRunnable)
         _serviceState.tryEmit("Service Connected")
     }
 
@@ -156,8 +179,10 @@ class OzonJobAccessibilityService : AccessibilityService() {
         // Only act on Ozon app or system gestures
         if (rootNode.packageName != "ru.ozon.hire") {
             // Log once in a while if we are in wrong app
-            if ((System.currentTimeMillis() % 10000) < 500) {
+            val now = System.currentTimeMillis()
+            if (now - lastDumpTime > DUMP_INTERVAL) {
                 Log.d(TAG, "Waiting for Ozon... current: ${rootNode.packageName}")
+                lastDumpTime = now
             }
             return
         }
@@ -211,15 +236,19 @@ class OzonJobAccessibilityService : AccessibilityService() {
             
             // Dynamic acceleration for simple navigation steps
             val multiplier = when (currentState) {
-                State.TYPE_SEARCH_QUERY -> 0.3f   // Loupe -> Keyboard
-                State.SELECT_WAREHOUSE -> 0.5f    // Typing -> Select card
-                State.CLICK_ENROLL -> 0.4f        // Select -> Enroll button
-                State.FIND_JOB_CARD -> 0.4f       // Enroll -> Job list
-                State.FIND_SEARCH_FIELD -> 0.5f   // Tab -> Loupe
+                State.BOOTSTRAP_DETECT_AND_ROUTE -> 0.2f // Quick screen detection
+                State.TYPE_SEARCH_QUERY -> 0.3f          // Loupe -> Keyboard
+                State.SELECT_WAREHOUSE -> 0.4f           // Typing -> Select card
+                State.CLICK_ENROLL -> 0.3f               // Select -> Enroll button
+                State.FIND_JOB_CARD -> 0.3f              // Enroll -> Job list
+                State.CHECK_SLOTS -> 0.1f                // Aggressive check for slots (0.3s)
+                State.FIND_SEARCH_FIELD -> 0.4f          // Tab -> Loupe
+                State.FIND_WAREHOUSES_TAB -> 0.4f        // Start screen -> Tab
+                State.REFRESH_BACK -> 0.2f               // Quick back action
                 else -> 1.0f
             }
             
-            val delayMillis = (delaySeconds * 1000 * multiplier).toLong().coerceAtLeast(300L)
+            val delayMillis = (delaySeconds * 1000 * multiplier).toLong().coerceAtLeast(100L)
 
             // throttle actions to avoid rapid double-clicks and state loops
             if (System.currentTimeMillis() - lastActionTime < delayMillis) return
@@ -238,6 +267,34 @@ class OzonJobAccessibilityService : AccessibilityService() {
             }
             
             Log.v(TAG, "processEvent: State=$currentState, Delay=${delayMillis}ms")
+
+            // NEW: Авто-коррекция состояния если мы «заблудились»
+            if (currentState != State.RECOVERY && currentState != State.BOOTSTRAP_DETECT_AND_ROUTE) {
+                val now = System.currentTimeMillis()
+                // Если мы в одном состоянии более 10 секунд без прогресса — сброс на BOOTSTRAP
+                if (now - lastProgressTime > 10000L && lastProgressTime != 0L) {
+                    Log.w(TAG, "State stuck detected ($currentState for 10s). Resetting to BOOTSTRAP.")
+                    currentState = State.BOOTSTRAP_DETECT_AND_ROUTE
+                    lastProgressTime = now
+                    return
+                }
+                
+                // Периодическая проверка: соответствует ли текущий экран текущему состоянию?
+                if (now - lastStateSyncTime > 4000L) {
+                    lastStateSyncTime = now
+                    val screenResult = ScreenDetector.detectScreen(rootNode)
+                    if (screenResult.screenId != ScreenDetector.ScreenId.UNKNOWN && screenResult.confidence > 0.7f) {
+                        val predictedState = Router.route(screenResult)
+                        // Если Router уверен что мы на другом экране — переключаемся
+                        if (predictedState != currentState && predictedState != State.RECOVERY) {
+                            Log.i(TAG, "Auto-Sync: Screen is ${screenResult.screenId}, switching $currentState -> $predictedState")
+                            currentState = predictedState
+                            lastProgressTime = now
+                            return
+                        }
+                    }
+                }
+            }
 
             when (currentState) {
                 State.BOOTSTRAP_DETECT_AND_ROUTE -> processBootstrapDetectAndRoute(rootNode)
@@ -369,12 +426,15 @@ class OzonJobAccessibilityService : AccessibilityService() {
             target.recycle()
             currentState = State.FIND_SEARCH_FIELD
             lastActionTime = System.currentTimeMillis()
+            lastProgressTime = System.currentTimeMillis()
             _serviceState.tryEmit("Clicked 'Склады'")
         } else {
-            if (!hasDumpedHierarchy || (System.currentTimeMillis() % 10000) < 500) {
+            val now = System.currentTimeMillis()
+            if (!hasDumpedHierarchy || (now - lastDumpTime > DUMP_INTERVAL)) {
                 Log.d(TAG, "Tab 'Склады' not found in hierarchy of ${rootNode.packageName}. Dumping...")
                 dumpNodeHierarchy(rootNode, 0)
                 hasDumpedHierarchy = true
+                lastDumpTime = now
             }
         }
     }
@@ -405,12 +465,15 @@ class OzonJobAccessibilityService : AccessibilityService() {
             header.recycle()
             currentState = State.TYPE_SEARCH_QUERY
             lastActionTime = System.currentTimeMillis()
+            lastProgressTime = System.currentTimeMillis()
             _serviceState.tryEmit("Clicked Search Icon (Scanner)")
         } else {
-            if (!hasDumpedHierarchy || (System.currentTimeMillis() % 8000) < 500) {
+            val now = System.currentTimeMillis()
+            if (!hasDumpedHierarchy || (now - lastDumpTime > DUMP_INTERVAL)) {
                 Log.d(TAG, "Search screen verification failed. Root: ${rootNode.packageName}. Dumping...")
                 dumpNodeHierarchy(rootNode, 0)
                 hasDumpedHierarchy = true
+                lastDumpTime = now
             }
         }
     }
@@ -424,6 +487,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
             focus.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT, args)
             currentState = State.SELECT_WAREHOUSE
             lastActionTime = System.currentTimeMillis()
+            lastProgressTime = System.currentTimeMillis()
             _serviceState.tryEmit("Typed Warehouse Name")
         }
     }
@@ -441,11 +505,14 @@ class OzonJobAccessibilityService : AccessibilityService() {
             target.recycle()
             currentState = State.CLICK_ENROLL
             lastActionTime = System.currentTimeMillis()
+            lastProgressTime = System.currentTimeMillis()
         } else {
-            if (!hasDumpedHierarchy || (System.currentTimeMillis() % 10000) < 500) {
+            val now = System.currentTimeMillis()
+            if (!hasDumpedHierarchy || (now - lastDumpTime > DUMP_INTERVAL)) {
                 Log.d(TAG, "Warehouse card '$WAREHOUSE_NAME' not found (Recursive). Dumping...")
                 dumpNodeHierarchy(rootNode, 0)
                 hasDumpedHierarchy = true
+                lastDumpTime = now
             }
         }
     }
@@ -462,12 +529,15 @@ class OzonJobAccessibilityService : AccessibilityService() {
             target.recycle()
             currentState = State.FIND_JOB_CARD
             lastActionTime = System.currentTimeMillis()
+            lastProgressTime = System.currentTimeMillis()
             _serviceState.tryEmit("Clicked 'Записаться'")
         } else {
-            if (!hasDumpedHierarchy || (System.currentTimeMillis() % 5000) < 500) {
+            val now = System.currentTimeMillis()
+            if (!hasDumpedHierarchy || (now - lastDumpTime > DUMP_INTERVAL)) {
                 Log.d(TAG, "Searching for 'Записаться' button... (Current State: $currentState)")
                 dumpNodeHierarchy(rootNode, 0)
                 hasDumpedHierarchy = true
+                lastDumpTime = now
             }
         }
     }
@@ -489,6 +559,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
                 Log.d(TAG, "Scrolling to find $JOB_NAME...")
                 scrollable.performAction(AccessibilityNodeInfo.ACTION_SCROLL_FORWARD)
                 lastActionTime = System.currentTimeMillis()
+                lastProgressTime = System.currentTimeMillis()
                 _serviceState.tryEmit("Scrolling...")
             }
         }

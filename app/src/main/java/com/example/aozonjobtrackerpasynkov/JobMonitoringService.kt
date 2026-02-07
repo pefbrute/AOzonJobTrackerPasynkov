@@ -121,7 +121,7 @@ class JobMonitoringService : Service() {
             // Give app some time to open
             handler.postDelayed({
                 OzonJobAccessibilityService.startCheckCycle()
-            }, 5000)
+            }, 2000)
         } else {
             Log.e(TAG, "Ozon Job app (ru.ozon.job) not found")
             // Debug: List all ozon packages
