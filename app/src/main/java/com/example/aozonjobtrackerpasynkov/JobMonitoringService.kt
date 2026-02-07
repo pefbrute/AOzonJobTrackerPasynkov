@@ -52,8 +52,12 @@ class JobMonitoringService : Service() {
         // Listen for slot status to notify user
         scope.launch {
             OzonJobAccessibilityService.slotStatus.collectLatest { days ->
+                val time = java.text.SimpleDateFormat("HH:mm", java.util.Locale.getDefault()).format(java.util.Date())
                 if (days != null) {
+                    updateNotification("Last check $time: SLOTS FOUND!")
                     sendSlotFoundNotification(days)
+                } else {
+                    updateNotification("Last check $time: No slots found")
                 }
             }
         }

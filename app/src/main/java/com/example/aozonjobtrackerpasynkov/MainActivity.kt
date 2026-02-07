@@ -40,6 +40,17 @@ fun MainScreen(modifier: Modifier = Modifier) {
     var isMonitoring by remember { mutableStateOf(false) }
     val logs = remember { mutableStateListOf<String>() }
     
+    var isAccessibilityEnabled by remember { mutableStateOf(false) }
+    
+    // Check accessibility status every 2 seconds
+    LaunchedEffect(Unit) {
+        while(true) {
+            val enabledServices = Settings.Secure.getString(context.contentResolver, Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES) ?: ""
+            isAccessibilityEnabled = enabledServices.contains(context.packageName)
+            kotlinx.coroutines.delay(2000)
+        }
+    }
+
     LaunchedEffect(Unit) {
         OzonJobAccessibilityService.serviceState.collectLatest { msg ->
             logs.add(0, "[Access] $msg")
@@ -54,6 +65,14 @@ fun MainScreen(modifier: Modifier = Modifier) {
         Text("Ozon Job Watcher", style = MaterialTheme.typography.headlineMedium)
         
         Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = if (isAccessibilityEnabled) "Accessibility: ACTIVE" else "Accessibility: DISABLED",
+            color = if (isAccessibilityEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error,
+            style = MaterialTheme.typography.titleMedium
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
 
         Text("Action Delay: ${"%.1f".format(actionDelay)}s")
         Slider(
