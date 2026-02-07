@@ -15,6 +15,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.example.aozonjobtrackerpasynkov.ui.theme.AOzonJobTrackerPasynkovTheme
+import android.content.Context
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import kotlinx.coroutines.flow.collectLatest
 
 class MainActivity : ComponentActivity() {
@@ -44,10 +47,26 @@ fun MainScreen(modifier: Modifier = Modifier) {
         }
     }
 
+    val sharedPrefs = context.getSharedPreferences("OzonPrefs", Context.MODE_PRIVATE)
+    var actionDelay by remember { mutableFloatStateOf(sharedPrefs.getFloat("action_delay", 3.0f)) }
+
     Column(modifier = modifier.padding(16.dp)) {
         Text("Ozon Job Watcher", style = MaterialTheme.typography.headlineMedium)
         
         Spacer(modifier = Modifier.height(16.dp))
+
+        Text("Action Delay: ${"%.1f".format(actionDelay)}s")
+        Slider(
+            value = actionDelay,
+            onValueChange = { 
+                actionDelay = it
+                sharedPrefs.edit().putFloat("action_delay", it).apply()
+            },
+            valueRange = 1f..10f,
+            steps = 18 // 0.5s increments
+        )
+        
+        Spacer(modifier = Modifier.height(8.dp))
         
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Button(onClick = {

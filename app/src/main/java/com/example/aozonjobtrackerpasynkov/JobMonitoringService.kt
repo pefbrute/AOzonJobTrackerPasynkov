@@ -51,9 +51,9 @@ class JobMonitoringService : Service() {
         
         // Listen for slot status to notify user
         scope.launch {
-            OzonJobAccessibilityService.slotStatus.collectLatest { found ->
-                if (found) {
-                    sendSlotFoundNotification()
+            OzonJobAccessibilityService.slotStatus.collectLatest { days ->
+                if (days != null) {
+                    sendSlotFoundNotification(days)
                 }
             }
         }
@@ -143,13 +143,14 @@ class JobMonitoringService : Service() {
         manager.notify(NOTIFICATION_ID, createNotification(text))
     }
     
-    private fun sendSlotFoundNotification() {
+    private fun sendSlotFoundNotification(days: String) {
         val notification = NotificationCompat.Builder(this, ALERT_CHANNEL_ID)
             .setContentTitle("SLOTS FOUND!")
-            .setContentText("Производство непрофиль available!")
+            .setContentText("Dates: $days")
             .setSmallIcon(R.mipmap.ic_launcher)
             .setPriority(NotificationCompat.PRIORITY_MAX)
             .setDefaults(NotificationCompat.DEFAULT_ALL)
+            .setStyle(NotificationCompat.BigTextStyle().bigText("Available dates: $days"))
             .build()
             
         val manager = getSystemService(NotificationManager::class.java)

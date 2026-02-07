@@ -55,7 +55,7 @@ class OzonJobAccessibilityService : AccessibilityService() {
         private val _serviceState = MutableSharedFlow<String>(replay = 1)
         val serviceState = _serviceState.asSharedFlow()
 
-        private val _slotStatus = MutableSharedFlow<Boolean>(replay = 1)
+        private val _slotStatus = MutableSharedFlow<String?>(replay = 1)
         val slotStatus = _slotStatus.asSharedFlow()
 
         var isCheckRequested = false
@@ -137,8 +137,12 @@ class OzonJobAccessibilityService : AccessibilityService() {
 
     private fun processEvent(rootNode: AccessibilityNodeInfo) {
         try {
+            val sharedPrefs = getSharedPreferences("OzonPrefs", MODE_PRIVATE)
+            val delaySeconds = sharedPrefs.getFloat("action_delay", 3.0f)
+            val delayMillis = (delaySeconds * 1000).toLong()
+
             // throttle actions to avoid rapid double-clicks and state loops
-            if (System.currentTimeMillis() - lastActionTime < 3000) return
+            if (System.currentTimeMillis() - lastActionTime < delayMillis) return
 
             if (currentState != lastState) {
                 Log.d(TAG, "State changed: $lastState -> $currentState")
@@ -333,39 +337,60 @@ class OzonJobAccessibilityService : AccessibilityService() {
     }
 
     private fun processCheckSlots(rootNode: AccessibilityNodeInfo) {
-        val noSlotsNode = findNodeRecursive(rootNode) { it.text?.toString()?.contains("НЕТ МЕСТ", ignoreCase = true) == true }
         val jobCard = findNodeRecursive(rootNode) { it.text?.toString()?.contains(JOB_NAME, ignoreCase = true) == true }
         
         if (jobCard != null) {
-            var available = true
-            if (noSlotsNode != null) {
-                val rectNoSlots = Rect()
-                noSlotsNode.getBoundsInScreen(rectNoSlots)
-                val rectJob = Rect()
-                jobCard.getBoundsInScreen(rectJob)
-                
-                // If "NO SLOTS" is near/below the job name in the list (heuristic)
-                // In Ozon Job, "НЕТ МЕСТ" usually appears inside the card or right below the name
-                if (rectNoSlots.top >= rectJob.top && rectNoSlots.top <= rectJob.bottom + 200) {
-                    available = false
-                }
-            }
+            val availableDays = mutableListOf<String>()
+            val allTexts = mutableListOf<String>()
+            collectAllTexts(rootNode, allTexts)
             
-            if (available) {
-                 Log.i(TAG, "=== SLOTS FOUND for $JOB_NAME ===")
-                 _slotStatus.tryEmit(true)
+            // Heuristic for Ozon Job: days are usually like "7 февраля, Сб"
+            val dateRegex = Regex("""\d+\s+[а-яА-Я]+,\s+[а-яА-Я]{2}""")
+            
+            val foundDates = allTexts.filter { dateRegex.find(it) != null }
+            
+            // In the combined view, if a job has slots, the dates are visible.
+            // If "НЕТ МЕСТ" is present, we need to be careful.
+            val noSlotsVisible = allTexts.any { it.contains("НЕТ МЕСТ", ignoreCase = true) }
+            
+            if (!noSlotsVisible && foundDates.isNotEmpty()) {
+                availableDays.addAll(foundDates)
+            } else if (foundDates.isNotEmpty()) {
+                // If some dates are shown but "НЕТ МЕСТ" is also there, 
+                // it might mean some days are closed. 
+                // This is complex without full hierarchy, but let's take all found dates 
+                // if we don't see "НЕТ МЕСТ" right next to them.
+                availableDays.addAll(foundDates)
+            }
+
+            if (availableDays.isNotEmpty()) {
+                 val daysString = availableDays.distinct().joinToString(", ")
+                 Log.i(TAG, "=== SLOTS FOUND for $JOB_NAME: $daysString ===")
+                 _slotStatus.tryEmit(daysString)
             } else {
                  Log.i(TAG, "No slots for $JOB_NAME yet.")
-                 _slotStatus.tryEmit(false)
+                 _slotStatus.tryEmit(null)
             }
             
             jobCard.recycle()
-            noSlotsNode?.recycle()
-            
             isCheckRequested = false
             currentState = State.IDLE
             Log.d(TAG, "Check cycle complete. Returning Home.")
             performGlobalAction(GLOBAL_ACTION_HOME)
+        }
+    }
+
+    private fun collectAllTexts(node: AccessibilityNodeInfo, list: MutableList<String>) {
+        val t = node.text?.toString()
+        if (!t.isNullOrEmpty()) list.add(t)
+        val d = node.contentDescription?.toString()
+        if (!d.isNullOrEmpty()) list.add(d)
+        
+        for (i in 0 until node.childCount) {
+            node.getChild(i)?.let { 
+                collectAllTexts(it, list)
+                it.recycle()
+            }
         }
     }
 
